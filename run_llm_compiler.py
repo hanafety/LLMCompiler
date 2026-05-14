@@ -5,6 +5,10 @@ import os
 import time
 import shutil
 
+from dotenv import load_dotenv
+
+load_dotenv()  # 从 .env 文件加载环境变量
+
 import numpy as np
 
 from configs.hotpotqa.configs import CONFIGS as HOTPOTQA_CONFIGS
