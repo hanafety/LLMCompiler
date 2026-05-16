@@ -260,6 +260,7 @@ class Planner:
             inputs=inputs, is_replan=is_replan, callbacks=callbacks
         )
         llm_response = llm_response + "\n"
+        self._last_raw_response = llm_response  # Store for plan info collection
         return self.output_parser.parse(llm_response)
 
     async def aplan(
@@ -280,3 +281,4 @@ class Planner:
         if callbacks:
             all_callbacks.extend(callbacks)
         await self.run_llm(inputs=inputs, is_replan=is_replan, callbacks=all_callbacks)
+        self._last_raw_response = ""  # Streaming mode, raw output not captured

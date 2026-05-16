@@ -131,6 +131,14 @@ class LLMCompiler(Chain, extra="allow"):
         if self.executor_callback:
             self.executor_callback.reset()
 
+    def get_plan_info(self) -> Dict[str, Any]:
+        """Get detailed plan information for validation.
+
+        Returns:
+            Dict containing raw_llm_output, tasks, and execution_results.
+        """
+        return getattr(self, "_plan_info", {})
+
     @property
     def input_keys(self) -> List[str]:
         return [self.input_key]
@@ -274,6 +282,26 @@ class LLMCompiler(Chain, extra="allow"):
                 task_fetching_unit.set_tasks(tasks)
                 await task_fetching_unit.schedule()
             tasks = task_fetching_unit.tasks
+
+            # Collect plan info for validation (only in first iteration)
+            if is_first_iter:
+                self._plan_info = {
+                    "raw_llm_output": getattr(self.planner, "_last_raw_response", ""),
+                    "tasks": [
+                        {
+                            "idx": task.idx,
+                            "name": task.name,
+                            "args": list(task.args) if isinstance(task.args, (list, tuple)) else task.args,
+                            "dependencies": list(task.dependencies),
+                        }
+                        for task in tasks.values()
+                    ],
+                    "execution_results": {
+                        str(task.idx): task.observation
+                        for task in tasks.values()
+                        if task.observation is not None
+                    },
+                }
 
             # collect thought-action-observation
             agent_scratchpad += "\n\n"
