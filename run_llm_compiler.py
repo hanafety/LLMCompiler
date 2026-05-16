@@ -224,6 +224,9 @@ async def main():
                 "answer": raw_answer,  # not normalized
                 "time": e2e_time,
             }
+            # Record plan info for DAG validation
+            if not args.react and hasattr(agent, "get_plan_info"):
+                all_results[id]["plan"] = agent.get_plan_info()
             stats = None
             if args.do_benchmark and args.react:
                 assert logging_callback is not None
