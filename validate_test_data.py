@@ -43,6 +43,95 @@ class Issue:
     location: Optional[Dict[str, Any]] = None
 
 
+def detect_cycle(tasks: List[TaskInfo]) -> Tuple[bool, Optional[List[int]]]:
+    """使用Kahn算法检测DAG中的循环依赖。
+
+    Returns:
+        Tuple[bool, Optional[List[int]]]: (是否存在循环, 循环路径或None)
+    """
+    if not tasks:
+        return False, None
+
+    # 构建邻接表和入度表
+    task_indices = {t.idx for t in tasks}
+    in_degree = {idx: 0 for idx in task_indices}
+    graph = defaultdict(list)
+
+    for task in tasks:
+        for dep in task.dependencies:
+            if dep in task_indices:
+                graph[dep].append(task.idx)
+                in_degree[task.idx] += 1
+
+    # Kahn算法
+    queue = [idx for idx in task_indices if in_degree[idx] == 0]
+    sorted_tasks = []
+
+    while queue:
+        node = queue.pop(0)
+        sorted_tasks.append(node)
+
+        for neighbor in graph[node]:
+            in_degree[neighbor] -= 1
+            if in_degree[neighbor] == 0:
+                queue.append(neighbor)
+
+    # 如果排序后的任务数小于总任务数，说明存在循环
+    if len(sorted_tasks) < len(task_indices):
+        # 找到循环中的节点
+        cycle_nodes = [idx for idx in task_indices if idx not in sorted_tasks]
+        return True, cycle_nodes
+
+    return False, None
+
+
+def validate_dag(sample: SampleInfo) -> List[Issue]:
+    """验证DAG结构。
+
+    检查项:
+    1. 无循环依赖
+    2. 所有依赖引用的任务存在
+    3. 依赖编号小于当前任务编号（避免前向引用）
+    """
+    issues = []
+    task_indices = {t.idx for t in sample.tasks}
+
+    # 检查循环依赖
+    has_cycle, cycle_path = detect_cycle(sample.tasks)
+    if has_cycle:
+        issues.append(Issue(
+            sample_id=sample.sample_id,
+            benchmark=sample.benchmark,
+            severity="error",
+            issue_type="cycle_dependency",
+            message=f"检测到循环依赖，涉及任务: {cycle_path}",
+        ))
+
+    # 检查依赖引用
+    for task in sample.tasks:
+        for dep in task.dependencies:
+            if dep not in task_indices:
+                issues.append(Issue(
+                    sample_id=sample.sample_id,
+                    benchmark=sample.benchmark,
+                    severity="error",
+                    issue_type="invalid_reference",
+                    message=f"任务{task.idx}引用了不存在的依赖${dep}",
+                    location={"task_idx": task.idx},
+                ))
+            elif dep >= task.idx:
+                issues.append(Issue(
+                    sample_id=sample.sample_id,
+                    benchmark=sample.benchmark,
+                    severity="warning",
+                    issue_type="forward_reference",
+                    message=f"任务{task.idx}前向引用了${dep}（依赖编号应小于当前编号）",
+                    location={"task_idx": task.idx},
+                ))
+
+    return issues
+
+
 # 正则表达式：匹配 $id 和 ${id}
 ID_PATTERN = re.compile(r"\$\{?(\d+)\}?")
 
