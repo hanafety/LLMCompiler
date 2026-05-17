@@ -1,0 +1,1973 @@
+{
+    "5a8b57f25542995d1e6f1371": {
+        "question": "Were Scott Derrickson and Ed Wood of the same nationality?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 5.613463878631592,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Scott Derrickson"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Ed Wood"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 97,
+                "all_times": [
+                    1.67
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 505,
+                "output_tokens": 84,
+                "all_times": [
+                    1.76
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1020,
+                "output_tokens": 181,
+                "all_times": [
+                    1.67,
+                    1.76
+                ]
+            }
+        }
+    },
+    "5adbf0a255429947ff17385a": {
+        "question": "Are the Laleli Mosque and Esma Sultan Mansion located in the same neighborhood?",
+        "label": "no",
+        "answer": "no",
+        "time": 7.3214335441589355,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Laleli Mosque"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Esma Sultan Mansion"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 126,
+                "all_times": [
+                    1.98
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 511,
+                "output_tokens": 315,
+                "all_times": [
+                    4.35
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1026,
+                "output_tokens": 441,
+                "all_times": [
+                    1.98,
+                    4.35
+                ]
+            }
+        }
+    },
+    "5a8db19d5542994ba4e3dd00": {
+        "question": "Are Local H and For Against both from the United States?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 4.3697803020477295,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Local H"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "For Against"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 119,
+                "all_times": [
+                    1.93
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 502,
+                "output_tokens": 93,
+                "all_times": [
+                    1.5
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1017,
+                "output_tokens": 212,
+                "all_times": [
+                    1.93,
+                    1.5
+                ]
+            }
+        }
+    },
+    "5ab56e32554299637185c594": {
+        "question": "Are Random House Tower and 888 7th Avenue both used for real estate?",
+        "label": "no",
+        "answer": "",
+        "time": 6.237201929092407,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Random House Tower"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "888 7th Avenue"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 134,
+                "all_times": [
+                    2.25
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 511,
+                "output_tokens": 218,
+                "all_times": [
+                    2.93
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1026,
+                "output_tokens": 352,
+                "all_times": [
+                    2.25,
+                    2.93
+                ]
+            }
+        }
+    },
+    "5ab29c24554299449642c932": {
+        "question": "Are Giuseppe Verdi and Ambroise Thomas both Opera composers ?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 4.7601518630981445,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Giuseppe Verdi"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Ambroise Thomas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 106,
+                "all_times": [
+                    1.67
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 506,
+                "output_tokens": 161,
+                "all_times": [
+                    2.2
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1021,
+                "output_tokens": 267,
+                "all_times": [
+                    1.67,
+                    2.2
+                ]
+            }
+        }
+    },
+    "5a8133725542995ce29dcbdb": {
+        "question": "Which writer was from England, Henry Roth or Robert Erskine Childers?",
+        "label": "Robert Erskine Childers DSC",
+        "answer": "Robert Erskine Childers",
+        "time": 4.997658967971802,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Henry Roth"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Robert Erskine Childers"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 93,
+                "all_times": [
+                    1.57
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 512,
+                "output_tokens": 174,
+                "all_times": [
+                    2.48
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1027,
+                "output_tokens": 267,
+                "all_times": [
+                    1.57,
+                    2.48
+                ]
+            }
+        }
+    },
+    "5ae2070a5542994d89d5b313": {
+        "question": "Which performance act has a higher instrument to person ratio, Badly Drawn Boy or Wolf Alice? ",
+        "label": "Badly Drawn Boy",
+        "answer": "Badly Drawn Boy",
+        "time": 31.11710262298584,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [],
+            "execution_results": {}
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 99,
+                "all_times": [
+                    1.68
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 496,
+                "output_tokens": 2169,
+                "all_times": [
+                    29.43
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1011,
+                "output_tokens": 2268,
+                "all_times": [
+                    1.68,
+                    29.43
+                ]
+            }
+        }
+    },
+    "5abd259d55429924427fcf1a": {
+        "question": "Are both Dictyosperma, and Huernia described as a genus?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 3.903107166290283,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Dictyosperma"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Huernia"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 88,
+                "all_times": [
+                    1.27
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 511,
+                "output_tokens": 118,
+                "all_times": [
+                    1.83
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1026,
+                "output_tokens": 206,
+                "all_times": [
+                    1.27,
+                    1.83
+                ]
+            }
+        }
+    },
+    "5ae4a3265542995ad6573de5": {
+        "question": "Hayden is a singer-songwriter from Canada, but where does Buck-Tick hail from?",
+        "label": "Fujioka, Gunma",
+        "answer": "Japan",
+        "time": 4.881844997406006,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Buck-Tick"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 105,
+                "all_times": [
+                    1.72
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 501,
+                "output_tokens": 133,
+                "all_times": [
+                    2.17
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1016,
+                "output_tokens": 238,
+                "all_times": [
+                    1.72,
+                    2.17
+                ]
+            }
+        }
+    },
+    "5abc0a5d5542993f40c73c64": {
+        "question": "Are Freakonomics and In the Realm of the Hackers both American documentaries?",
+        "label": "no",
+        "answer": "no",
+        "time": 5.636221170425415,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Freakonomics"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "In the Realm of the Hackers"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 116,
+                "all_times": [
+                    1.69
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 511,
+                "output_tokens": 214,
+                "all_times": [
+                    3.03
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1026,
+                "output_tokens": 330,
+                "all_times": [
+                    1.69,
+                    3.03
+                ]
+            }
+        }
+    },
+    "5a7cc50e554299452d57ba3e": {
+        "question": "Which band, Letters to Cleo or Screaming Trees, had more members?",
+        "label": "Letters to Cleo",
+        "answer": "Letters to Cleo",
+        "time": 8.94511103630066,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Letters to Cleo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Screaming Trees"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 113,
+                "all_times": [
+                    1.69
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 509,
+                "output_tokens": 460,
+                "all_times": [
+                    6.19
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1024,
+                "output_tokens": 573,
+                "all_times": [
+                    1.69,
+                    6.19
+                ]
+            }
+        }
+    },
+    "5ab51dae5542991779162d82": {
+        "question": "Are both Elko Regional Airport and Gerald R. Ford International Airport located in Michigan?",
+        "label": "no",
+        "answer": "no",
+        "time": 4.975420236587524,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Elko Regional Airport"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Gerald R. Ford International Airport"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 119,
+                "all_times": [
+                    1.88
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 513,
+                "output_tokens": 183,
+                "all_times": [
+                    2.4
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1028,
+                "output_tokens": 302,
+                "all_times": [
+                    1.88,
+                    2.4
+                ]
+            }
+        }
+    },
+    "5a7a0e1e5542990783324e1a": {
+        "question": "Which dog's ancestors include Gordon and Irish Setters: the Manchester Terrier or the Scotch Collie?",
+        "label": "Scotch Collie",
+        "answer": "Scotch Collie",
+        "time": 11.580854892730713,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Manchester Terrier"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Scotch Collie"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 103,
+                "all_times": [
+                    1.94
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 514,
+                "output_tokens": 642,
+                "all_times": [
+                    8.7
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1029,
+                "output_tokens": 745,
+                "all_times": [
+                    1.94,
+                    8.7
+                ]
+            }
+        }
+    },
+    "5a8e068b5542995085b37384": {
+        "question": "Are Ferocactus and Silene both types of plant?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 4.259140491485596,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Ferocactus"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Silene"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 91,
+                "all_times": [
+                    1.53
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 503,
+                "output_tokens": 88,
+                "all_times": [
+                    1.87
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1018,
+                "output_tokens": 179,
+                "all_times": [
+                    1.53,
+                    1.87
+                ]
+            }
+        }
+    },
+    "5adc53f75542996e6852530a": {
+        "question": "Are both Cypress and Ajuga genera?",
+        "label": "no",
+        "answer": "no",
+        "time": 11.63478946685791,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Cypress"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Ajuga"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 156,
+                "all_times": [
+                    2.46
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 500,
+                "output_tokens": 676,
+                "all_times": [
+                    8.19
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1015,
+                "output_tokens": 832,
+                "all_times": [
+                    2.46,
+                    8.19
+                ]
+            }
+        }
+    },
+    "5a7be2595542997c3ec972ac": {
+        "question": "Who was born earlier, Emma Bull or Virginia Woolf?",
+        "label": "Adeline Virginia Woolf",
+        "answer": "Virginia Woolf",
+        "time": 4.220633506774902,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Emma Bull"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Virginia Woolf"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 89,
+                "all_times": [
+                    1.49
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 503,
+                "output_tokens": 129,
+                "all_times": [
+                    1.74
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1018,
+                "output_tokens": 218,
+                "all_times": [
+                    1.49,
+                    1.74
+                ]
+            }
+        }
+    },
+    "5a7759fc5542993569682d60": {
+        "question": "Where are Teide National Park and Garajonay National Park located?",
+        "label": "Canary Islands, Spain",
+        "answer": "Canary Islands, Spain",
+        "time": 6.080224990844727,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Teide National Park"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Garajonay National Park"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 141,
+                "all_times": [
+                    2.21
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 510,
+                "output_tokens": 292,
+                "all_times": [
+                    3.03
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1025,
+                "output_tokens": 433,
+                "all_times": [
+                    2.21,
+                    3.03
+                ]
+            }
+        }
+    },
+    "5aba749055429901930fa7d8": {
+        "question": "What occupation do Chris Menges and Aram Avakian share?",
+        "label": "director",
+        "answer": "film director",
+        "time": 7.414382696151733,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Chris Menges"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Aram Avakian"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 174,
+                "all_times": [
+                    2.53
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 506,
+                "output_tokens": 323,
+                "all_times": [
+                    4.2
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1021,
+                "output_tokens": 497,
+                "all_times": [
+                    2.53,
+                    4.2
+                ]
+            }
+        }
+    },
+    "5ae224da554299234fd043ee": {
+        "question": "Do the drinks Gibson and Zurracapote both contain gin?",
+        "label": "no",
+        "answer": "no",
+        "time": 6.255361557006836,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Gibson (cocktail)"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Zurracapote"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 119,
+                "all_times": [
+                    1.94
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 508,
+                "output_tokens": 285,
+                "all_times": [
+                    3.51
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1023,
+                "output_tokens": 404,
+                "all_times": [
+                    1.94,
+                    3.51
+                ]
+            }
+        }
+    },
+    "5ac1b8ee5542994d76dccedc": {
+        "question": "Which filmmaker was known for animation, Lev Yilmaz or Pamela B. Green?",
+        "label": "Levni Yilmaz",
+        "answer": "Lev Yilmaz",
+        "time": 6.869147300720215,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Lev Yilmaz"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Pamela B. Green"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 76,
+                "all_times": [
+                    1.22
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 512,
+                "output_tokens": 359,
+                "all_times": [
+                    4.63
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1027,
+                "output_tokens": 435,
+                "all_times": [
+                    1.22,
+                    4.63
+                ]
+            }
+        }
+    },
+    "5a84c4135542994c784dda31": {
+        "question": "Are Yingkou and Fuding the same level of city?",
+        "label": "no",
+        "answer": "no",
+        "time": 4.74880313873291,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Yingkou"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Fuding"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 92,
+                "all_times": [
+                    1.34
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 501,
+                "output_tokens": 132,
+                "all_times": [
+                    2.54
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1016,
+                "output_tokens": 224,
+                "all_times": [
+                    1.34,
+                    2.54
+                ]
+            }
+        }
+    },
+    "5a7a455c5542994f819ef1a7": {
+        "question": "Who died first, George Archainbaud or Ralph Murphy?",
+        "label": "George Archainbaud",
+        "answer": "Ralph Murphy",
+        "time": 6.894212961196899,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "George Archainbaud"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Ralph Murphy"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 92,
+                "all_times": [
+                    2.29
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 506,
+                "output_tokens": 300,
+                "all_times": [
+                    3.65
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1021,
+                "output_tokens": 392,
+                "all_times": [
+                    2.29,
+                    3.65
+                ]
+            }
+        }
+    },
+    "5add11935542994734353827": {
+        "question": "Were the bands Skin Yard and Ostava from the U.S.?",
+        "label": "no",
+        "answer": "No",
+        "time": 5.5896220207214355,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Skin Yard"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Ostava (band)"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 85,
+                "all_times": [
+                    1.39
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 506,
+                "output_tokens": 284,
+                "all_times": [
+                    3.27
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1021,
+                "output_tokens": 369,
+                "all_times": [
+                    1.39,
+                    3.27
+                ]
+            }
+        }
+    },
+    "5a8c5569554299240d9c2126": {
+        "question": "Are Daryl Hall and Gerry Marsden both musicians?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 4.9890031814575195,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Daryl Hall"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Gerry Marsden"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 101,
+                "all_times": [
+                    1.9
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 503,
+                "output_tokens": 159,
+                "all_times": [
+                    2.17
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1018,
+                "output_tokens": 260,
+                "all_times": [
+                    1.9,
+                    2.17
+                ]
+            }
+        }
+    },
+    "5a8574945542997b5ce3fffb": {
+        "question": "Which film was Oscar nominated, LaLee's Kin: The Legacy of Cotton or Gimme Shelter, the 1970 Rolling Stones documentary?",
+        "label": "LaLee's Kin: The Legacy of Cotton",
+        "answer": "LaLee's Kin: The Legacy of Cotton",
+        "time": 6.493856906890869,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "LaLee's Kin: The Legacy of Cotton"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Gimme Shelter (1970 film)"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 102,
+                "all_times": [
+                    1.68
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 530,
+                "output_tokens": 346,
+                "all_times": [
+                    4.06
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1045,
+                "output_tokens": 448,
+                "all_times": [
+                    1.68,
+                    4.06
+                ]
+            }
+        }
+    },
+    "5a7332935542991f9a20c67d": {
+        "question": "Which board game was published most recently, Pirate's Cove or Catan?",
+        "label": "Pirate's Cove",
+        "answer": "Pirate's Cove",
+        "time": 5.144612073898315,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Pirate's Cove (board game)"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Catan"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 107,
+                "all_times": [
+                    1.73
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 510,
+                "output_tokens": 217,
+                "all_times": [
+                    2.49
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1025,
+                "output_tokens": 324,
+                "all_times": [
+                    1.73,
+                    2.49
+                ]
+            }
+        }
+    },
+    "5ac2d1d755429921a00ab053": {
+        "question": "Who had the best singles ranking, Roberta Vinci or Jorge Lozano?",
+        "label": "Roberta Vinci",
+        "answer": "Roberta Vinci",
+        "time": 5.367250204086304,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Roberta Vinci"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Jorge Lozano"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 136,
+                "all_times": [
+                    1.86
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 509,
+                "output_tokens": 202,
+                "all_times": [
+                    2.59
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1024,
+                "output_tokens": 338,
+                "all_times": [
+                    1.86,
+                    2.59
+                ]
+            }
+        }
+    },
+    "5ac298f9554299657fa28fc9": {
+        "question": "Josey Scott and Ian Watkins were both promising musicians. Which of these talented men was incarcerated, impacting his career with a rock band?",
+        "label": "Lostprophets disbanded in 2013 after Watkins was charged with sexual offences in late 2012.",
+        "answer": "Ian Watkins",
+        "time": 5.139132976531982,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Josey Scott"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Ian Watkins"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 198,
+                "all_times": [
+                    2.41
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 518,
+                "output_tokens": 118,
+                "all_times": [
+                    1.68
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1033,
+                "output_tokens": 316,
+                "all_times": [
+                    2.41,
+                    1.68
+                ]
+            }
+        }
+    },
+    "5a88d745554299206df2b378": {
+        "question": "What occupation was shared by David Yates and Pietro Germi?",
+        "label": "director",
+        "answer": "film director",
+        "time": 10.517769813537598,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "David Yates"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Pietro Germi"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 130,
+                "all_times": [
+                    1.92
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 504,
+                "output_tokens": 161,
+                "all_times": [
+                    2.58
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1019,
+                "output_tokens": 291,
+                "all_times": [
+                    1.92,
+                    2.58
+                ]
+            }
+        }
+    },
+    "5ab642845542995eadeeff8e": {
+        "question": "Are Broughtonia and Laeliocattleya both orchids?",
+        "label": "yes",
+        "answer": "yes",
+        "time": 4.40909743309021,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Broughtonia"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Laeliocattleya"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 515,
+                "output_tokens": 111,
+                "all_times": [
+                    1.83
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 509,
+                "output_tokens": 116,
+                "all_times": [
+                    1.76
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 1024,
+                "output_tokens": 227,
+                "all_times": [
+                    1.83,
+                    1.76
+                ]
+            }
+        }
+    }
+}

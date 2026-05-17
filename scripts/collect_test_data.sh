@@ -10,7 +10,10 @@ export HTTPS_PROXY=http://127.0.0.1:10808
 # 样本数量
 N_SAMPLES=${1:-30}
 
-echo "=== 收集测试数据 (样本数: $N_SAMPLES) ==="
+# 模型名称（从.env读取或使用默认值）
+MODEL_NAME=${MODEL_NAME:-deepseek-v4-flash}
+
+echo "=== 收集测试数据 (样本数: $N_SAMPLES, 模型: $MODEL_NAME) ==="
 
 # 运行 hotpotqa
 echo ""
@@ -20,6 +23,7 @@ uv run python run_llm_compiler.py \
     --store results/test_hotpotqa.json \
     --stream \
     --do_benchmark \
+    --model_name "$MODEL_NAME" \
     --N $N_SAMPLES
 
 # 运行 movie
@@ -30,6 +34,7 @@ uv run python run_llm_compiler.py \
     --store results/test_movie.json \
     --stream \
     --do_benchmark \
+    --model_name "$MODEL_NAME" \
     --N $N_SAMPLES
 
 # 运行 parallelqa
@@ -40,6 +45,7 @@ uv run python run_llm_compiler.py \
     --store results/test_parallelqa.json \
     --stream \
     --do_benchmark \
+    --model_name "$MODEL_NAME" \
     --N $N_SAMPLES
 
 echo ""

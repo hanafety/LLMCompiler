@@ -1,0 +1,3723 @@
+{
+    "0": {
+        "question": "Find a movie similar to Mission Impossible, The Silence of the Lambs, American Beauty, Star Wars Episode IV - A New Hope\nOptions:\nAustin Powers International Man of Mystery\nAlesha Popovich and Tugarin the Dragon\nIn Cold Blood\nRosetta\n",
+        "label": "Austin Powers International Man of Mystery",
+        "answer": "Austin Powers International Man of Mystery",
+        "time": 10.112792491912842,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Austin Powers International Man of Mystery"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Alesha Popovich and Tugarin the Dragon"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "In Cold Blood"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Rosetta"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 413,
+                "all_times": [
+                    4.54
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1563,
+                "output_tokens": 311,
+                "all_times": [
+                    4.55
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2584,
+                "output_tokens": 724,
+                "all_times": [
+                    4.54,
+                    4.55
+                ]
+            }
+        }
+    },
+    "1": {
+        "question": "Find a movie similar to Raiders of the Lost Ark, American Beauty, Star Wars Episode V - The Empire Strikes Back, Groundhog Day\nOptions:\nGod Bless America\nMusic From Another Room\nTurbo A Power Rangers Movie\nStar Wars Episode IV - A New Hope\n",
+        "label": "Star Wars Episode IV - A New Hope",
+        "answer": "",
+        "time": 10.71964693069458,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "God Bless America"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Music From Another Room"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Turbo A Power Rangers Movie"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 363,
+                "all_times": [
+                    3.61
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1569,
+                "output_tokens": 451,
+                "all_times": [
+                    6.28
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2590,
+                "output_tokens": 814,
+                "all_times": [
+                    3.61,
+                    6.28
+                ]
+            }
+        }
+    },
+    "2": {
+        "question": "Find a movie similar to Star Wars Episode IV - A New Hope, Star Wars Episode V - The Empire Strikes Back, The Silence of the Lambs, The Princess Bride\nOptions:\nThe Valet\nLove Potion #9\nThe Twilight Samurai\nFargo\n",
+        "label": "Fargo",
+        "answer": "",
+        "time": 10.940975904464722,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Valet"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Love Potion #9"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "The Twilight Samurai"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Fargo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 233,
+                "all_times": [
+                    2.06
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1563,
+                "output_tokens": 567,
+                "all_times": [
+                    7.98
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2584,
+                "output_tokens": 800,
+                "all_times": [
+                    2.06,
+                    7.98
+                ]
+            }
+        }
+    },
+    "3": {
+        "question": "Find a movie similar to The Princess Bride, Goodfellas, Raiders of the Lost Ark, Star Wars Episode IV - A New Hope\nOptions:\nShe's So Lovely\nIndiana Jones and the Last Crusade\nDaddy Day Care\n35 Up\n",
+        "label": "Indiana Jones and the Last Crusade",
+        "answer": "",
+        "time": 11.759727001190186,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Goodfellas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "She's So Lovely"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Daddy Day Care"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "35 Up"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 359,
+                "all_times": [
+                    4.01
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1561,
+                "output_tokens": 474,
+                "all_times": [
+                    6.57
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2582,
+                "output_tokens": 833,
+                "all_times": [
+                    4.01,
+                    6.57
+                ]
+            }
+        }
+    },
+    "4": {
+        "question": "Find a movie similar to The Wizard of Oz, The Big Lebowski, Being John Malkovich, Run Lola Run\nOptions:\nDragon Ball Z Dead Zone\nLightning in a Bottle\nThe Omega Man\nGoodfellas\n",
+        "label": "Goodfellas",
+        "answer": "",
+        "time": 47.78894805908203,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Wizard of Oz"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "The Big Lebowski"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Being John Malkovich"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Run Lola Run"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Dragon Ball Z Dead Zone"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Lightning in a Bottle"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "The Omega Man"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Goodfellas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 239,
+                "all_times": [
+                    3.05
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1552,
+                "output_tokens": 3460,
+                "all_times": [
+                    43.76
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2573,
+                "output_tokens": 3699,
+                "all_times": [
+                    3.05,
+                    43.76
+                ]
+            }
+        }
+    },
+    "5": {
+        "question": "Find a movie similar to Raiders of the Lost Ark, Groundhog Day, The Fugitive, Star Wars Episode IV - A New Hope\nOptions:\nThe Big Lebowski\nA Letter to Three Wives\nHideaway\nCandyman\n",
+        "label": "The Big Lebowski",
+        "answer": "",
+        "time": 13.761829137802124,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Fugitive"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Big Lebowski"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "A Letter to Three Wives"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Hideaway"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Candyman"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 325,
+                "all_times": [
+                    3.53
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1551,
+                "output_tokens": 695,
+                "all_times": [
+                    9.44
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2572,
+                "output_tokens": 1020,
+                "all_times": [
+                    3.53,
+                    9.44
+                ]
+            }
+        }
+    },
+    "6": {
+        "question": "Find a movie similar to The Sword in the Stone, Fantasia, The Jungle Book, Willy Wonka & the Chocolate Factory\nOptions:\nThe Wizard of Oz\nCaptain Corelli's Mandolin\nTimecrimes\nArlington Road\n",
+        "label": "The Wizard of Oz",
+        "answer": "",
+        "time": 4.965561628341675,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Sword in the Stone"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Fantasia"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Jungle Book"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Willy Wonka & the Chocolate Factory"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Wizard of Oz"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Captain Corelli's Mandolin"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Timecrimes"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Arlington Road"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 260,
+                "all_times": [
+                    2.54
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1550,
+                "output_tokens": 121,
+                "all_times": [
+                    1.67
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2571,
+                "output_tokens": 381,
+                "all_times": [
+                    2.54,
+                    1.67
+                ]
+            }
+        }
+    },
+    "7": {
+        "question": "Find a movie similar to Star Wars Episode V - The Empire Strikes Back, Groundhog Day, Mission Impossible, Star Wars Episode IV - A New Hope\nOptions:\nView from the Top\nThe Doors\nRaiders of the Lost Ark\nQuick Change\n",
+        "label": "Raiders of the Lost Ark",
+        "answer": "",
+        "time": 11.374685525894165,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "View from the Top"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "The Doors"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Quick Change"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 354,
+                "all_times": [
+                    4.35
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1558,
+                "output_tokens": 490,
+                "all_times": [
+                    6.07
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2579,
+                "output_tokens": 844,
+                "all_times": [
+                    4.35,
+                    6.07
+                ]
+            }
+        }
+    },
+    "8": {
+        "question": "Find a movie similar to The Fugitive, Fargo, Groundhog Day, The Princess Bride\nOptions:\nJohn Q\nRaiders of the Lost Ark\nNo Man's Land\nThe Morning After\n",
+        "label": "Raiders of the Lost Ark",
+        "answer": "Raiders of the Lost Ark",
+        "time": 9.649628639221191,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Fugitive"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Fargo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "John Q"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "No Man's Land"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "The Morning After"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 245,
+                "all_times": [
+                    3.4
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1533,
+                "output_tokens": 414,
+                "all_times": [
+                    5.36
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2554,
+                "output_tokens": 659,
+                "all_times": [
+                    3.4,
+                    5.36
+                ]
+            }
+        }
+    },
+    "9": {
+        "question": "Find a movie similar to Star Wars Episode V - The Empire Strikes Back, Star Wars Episode IV - A New Hope, The Silence of the Lambs, Austin Powers International Man of Mystery\nOptions:\nMission Impossible\nSheena\nSouth Park Imaginationland\nThe Pervert's Guide to Cinema\n",
+        "label": "Mission Impossible",
+        "answer": "Mission Impossible",
+        "time": 13.34106183052063,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Austin Powers International Man of Mystery"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Sheena"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "South Park Imaginationland"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "The Pervert's Guide to Cinema"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 363,
+                "all_times": [
+                    3.64
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1574,
+                "output_tokens": 643,
+                "all_times": [
+                    8.07
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2595,
+                "output_tokens": 1006,
+                "all_times": [
+                    3.64,
+                    8.07
+                ]
+            }
+        }
+    },
+    "10": {
+        "question": "Find a movie similar to American Beauty, Raiders of the Lost Ark, Star Wars Episode V - The Empire Strikes Back, Groundhog Day\nOptions:\nThe Odd Couple II\nThe Bank Dick\nBill Burr Walk Your Way Out\nStar Wars Episode IV - A New Hope\n",
+        "label": "Star Wars Episode IV - A New Hope",
+        "answer": "",
+        "time": 7.324596881866455,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Odd Couple II"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "The Bank Dick"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Bill Burr Walk Your Way Out"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 364,
+                "all_times": [
+                    4.02
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1571,
+                "output_tokens": 161,
+                "all_times": [
+                    2.4
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2592,
+                "output_tokens": 525,
+                "all_times": [
+                    4.02,
+                    2.4
+                ]
+            }
+        }
+    },
+    "11": {
+        "question": "Find a movie similar to American Beauty, Goodfellas, The Silence of the Lambs, Star Wars Episode IV - A New Hope\nOptions:\nChristmas in Connecticut\nThe Princess Bride\nBill & Ted's Bogus Journey\nMelvin and Howard\n",
+        "label": "The Princess Bride",
+        "answer": "",
+        "time": 14.366117000579834,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Goodfellas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Christmas in Connecticut"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Bill & Ted's Bogus Journey"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Melvin and Howard"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 220,
+                "all_times": [
+                    3.09
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1556,
+                "output_tokens": 695,
+                "all_times": [
+                    9.72
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2577,
+                "output_tokens": 915,
+                "all_times": [
+                    3.09,
+                    9.72
+                ]
+            }
+        }
+    },
+    "12": {
+        "question": "Find a movie similar to Star Wars Episode IV - A New Hope, Indiana Jones and the Last Crusade, Star Wars Episode V - The Empire Strikes Back, The Big Lebowski\nOptions:\nTetsuo, the Ironman\nThe Princess Bride\nThe Barkley Marathons The Race That Eats Its Young\nBug\n",
+        "label": "The Princess Bride",
+        "answer": "",
+        "time": 7.82071852684021,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Big Lebowski"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Tetsuo, the Ironman"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "The Barkley Marathons The Race That Eats Its Young"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Bug"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 268,
+                "all_times": [
+                    2.83
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1589,
+                "output_tokens": 268,
+                "all_times": [
+                    4.28
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2610,
+                "output_tokens": 536,
+                "all_times": [
+                    2.83,
+                    4.28
+                ]
+            }
+        }
+    },
+    "13": {
+        "question": "Find a movie similar to The Wizard of Oz, Fargo, Run Lola Run, Indiana Jones and the Last Crusade\nOptions:\nWhite Frog\nRaiders of the Lost Ark\nThe Little Drummer Boy\nPenny Serenade\n",
+        "label": "Raiders of the Lost Ark",
+        "answer": "Raiders of the Lost Ark",
+        "time": 7.809770107269287,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Wizard of Oz"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Fargo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Run Lola Run"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "White Frog"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "The Little Drummer Boy"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Penny Serenade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 227,
+                "all_times": [
+                    2.64
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1551,
+                "output_tokens": 308,
+                "all_times": [
+                    4.43
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2572,
+                "output_tokens": 535,
+                "all_times": [
+                    2.64,
+                    4.43
+                ]
+            }
+        }
+    },
+    "14": {
+        "question": "Find a movie similar to Romancing the Stone, American Beauty, The Princess Bride, Star Wars Episode IV - A New Hope\nOptions:\nSave the Last Dance\nPassion\nBeing John Malkovich\nTrial and Error\n",
+        "label": "Being John Malkovich",
+        "answer": "",
+        "time": 24.391557693481445,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Romancing the Stone"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Save the Last Dance"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Passion"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Being John Malkovich"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Trial and Error"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 497,
+                "all_times": [
+                    5.42
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1548,
+                "output_tokens": 1461,
+                "all_times": [
+                    18.12
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2569,
+                "output_tokens": 1958,
+                "all_times": [
+                    5.42,
+                    18.12
+                ]
+            }
+        }
+    },
+    "15": {
+        "question": "Find a movie similar to The Sword in the Stone, The Jungle Book, Fantasia, The Wizard of Oz\nOptions:\n8 12\nFar from Heaven\nWilly Wonka & the Chocolate Factory\nPet Sematary\n",
+        "label": "Willy Wonka & the Chocolate Factory",
+        "answer": "",
+        "time": 8.852370262145996,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Sword in the Stone"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "The Jungle Book"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Fantasia"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Wizard of Oz"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "8 12"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Far from Heaven"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Willy Wonka & the Chocolate Factory"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Pet Sematary"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 428,
+                "all_times": [
+                    5.22
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1546,
+                "output_tokens": 155,
+                "all_times": [
+                    2.68
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2567,
+                "output_tokens": 583,
+                "all_times": [
+                    5.22,
+                    2.68
+                ]
+            }
+        }
+    },
+    "16": {
+        "question": "Find a movie similar to Raiders of the Lost Ark, Indiana Jones and the Last Crusade, Mission Impossible, Groundhog Day\nOptions:\nFred Armisen Standup for Drummers\nStar Wars Episode V - The Empire Strikes Back\nDeliver Us from Evil\nRed Lights\n",
+        "label": "Star Wars Episode V - The Empire Strikes Back",
+        "answer": "",
+        "time": 13.809035301208496,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Fred Armisen Standup for Drummers"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Deliver Us from Evil"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Red Lights"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 454,
+                "all_times": [
+                    5.15
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1572,
+                "output_tokens": 575,
+                "all_times": [
+                    7.78
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2593,
+                "output_tokens": 1029,
+                "all_times": [
+                    5.15,
+                    7.78
+                ]
+            }
+        }
+    },
+    "17": {
+        "question": "Find a movie similar to Raiders of the Lost Ark, Groundhog Day, Fargo, The Silence of the Lambs\nOptions:\nTape\nGettysburg\nThe Princess Bride\nStardust\n",
+        "label": "The Princess Bride",
+        "answer": "",
+        "time": 16.080947160720825,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Fargo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Tape"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Gettysburg"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Stardust"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 201,
+                "all_times": [
+                    2.07
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1537,
+                "output_tokens": 1039,
+                "all_times": [
+                    13.29
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2558,
+                "output_tokens": 1240,
+                "all_times": [
+                    2.07,
+                    13.29
+                ]
+            }
+        }
+    },
+    "18": {
+        "question": "Find a movie similar to Austin Powers International Man of Mystery, Star Wars Episode IV - A New Hope, Star Wars Episode V - The Empire Strikes Back, Mission Impossible\nOptions:\nThe Impostors\nVirunga\nSelf-criticism of a Bourgeois Dog\nAmerican Beauty\n",
+        "label": "American Beauty",
+        "answer": "",
+        "time": 12.559338569641113,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Austin Powers International Man of Mystery"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Impostors"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Virunga"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Self-criticism of a Bourgeois Dog"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 329,
+                "all_times": [
+                    3.13
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1571,
+                "output_tokens": 595,
+                "all_times": [
+                    8.65
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2592,
+                "output_tokens": 924,
+                "all_times": [
+                    3.13,
+                    8.65
+                ]
+            }
+        }
+    },
+    "19": {
+        "question": "Find a movie similar to American Beauty, Star Wars Episode V - The Empire Strikes Back, Raiders of the Lost Ark, Star Wars Episode IV - A New Hope\nOptions:\nColombiana\nSnow Falling on Cedars\nGroundhog Day\nSanta's Little Helper\n",
+        "label": "Groundhog Day",
+        "answer": "Groundhog Day",
+        "time": 12.13716745376587,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Colombiana"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Snow Falling on Cedars"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Santa's Little Helper"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 368,
+                "all_times": [
+                    3.67
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1567,
+                "output_tokens": 567,
+                "all_times": [
+                    7.57
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2588,
+                "output_tokens": 935,
+                "all_times": [
+                    3.67,
+                    7.57
+                ]
+            }
+        }
+    },
+    "20": {
+        "question": "Find a movie similar to Goodfellas, Star Wars Episode V - The Empire Strikes Back, The Silence of the Lambs, Raiders of the Lost Ark\nOptions:\nIp Man 3\nStar Wars Episode IV - A New Hope\nThe Wedding Ringer\nDelivery Man\n",
+        "label": "Star Wars Episode IV - A New Hope",
+        "answer": "",
+        "time": 8.776280164718628,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Goodfellas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Ip Man 3"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "The Wedding Ringer"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Delivery Man"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 293,
+                "all_times": [
+                    3.3
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1570,
+                "output_tokens": 334,
+                "all_times": [
+                    4.72
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2591,
+                "output_tokens": 627,
+                "all_times": [
+                    3.3,
+                    4.72
+                ]
+            }
+        }
+    },
+    "21": {
+        "question": "Find a movie similar to Goodfellas, Raiders of the Lost Ark, Star Wars Episode IV - A New Hope, The Silence of the Lambs\nOptions:\nMonty Python and the Holy Grail\nWeekend at Bernie's\nAmerican in Paris, An\nLet It Snow\n",
+        "label": "Monty Python and the Holy Grail",
+        "answer": "Monty Python and the Holy Grail",
+        "time": 15.26732611656189,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Goodfellas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Monty Python and the Holy Grail"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Weekend at Bernie's"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "American in Paris, An"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Let It Snow"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 238,
+                "all_times": [
+                    2.68
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1572,
+                "output_tokens": 944,
+                "all_times": [
+                    11.87
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2593,
+                "output_tokens": 1182,
+                "all_times": [
+                    2.68,
+                    11.87
+                ]
+            }
+        }
+    },
+    "22": {
+        "question": "Find a movie similar to The Princess Bride, American Beauty, Monty Python and the Holy Grail, Raiders of the Lost Ark\nOptions:\nThe Nutty Professor\nStar Wars Episode IV - A New Hope\nAntichrist\nStroszek\n",
+        "label": "Star Wars Episode IV - A New Hope",
+        "answer": "",
+        "time": 7.655129432678223,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Monty Python and the Holy Grail"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Nutty Professor"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Antichrist"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Stroszek"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 283,
+                "all_times": [
+                    3.1
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1557,
+                "output_tokens": 325,
+                "all_times": [
+                    3.73
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2578,
+                "output_tokens": 608,
+                "all_times": [
+                    3.1,
+                    3.73
+                ]
+            }
+        }
+    },
+    "23": {
+        "question": "Find a movie similar to Indiana Jones and the Last Crusade, Raiders of the Lost Ark, The Big Lebowski, Star Wars Episode V - The Empire Strikes Back\nOptions:\nThe Great Raid\nEdmond\nFalling Down\nGoodfellas\n",
+        "label": "Goodfellas",
+        "answer": "Goodfellas",
+        "time": 12.840037107467651,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Big Lebowski"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Great Raid"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Edmond"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Falling Down"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Goodfellas"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 334,
+                "all_times": [
+                    3.52
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1561,
+                "output_tokens": 709,
+                "all_times": [
+                    8.53
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2582,
+                "output_tokens": 1043,
+                "all_times": [
+                    3.52,
+                    8.53
+                ]
+            }
+        }
+    },
+    "24": {
+        "question": "Find a movie similar to The Big Lebowski, American Beauty, Raiders of the Lost Ark, The Princess Bride\nOptions:\nHouse of Cards\nA Time to Kill\nMirrors\nIndiana Jones and the Last Crusade\n",
+        "label": "Indiana Jones and the Last Crusade",
+        "answer": "",
+        "time": 6.491879940032959,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Big Lebowski"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "American Beauty"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "The Princess Bride"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "House of Cards"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "A Time to Kill"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Mirrors"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 227,
+                "all_times": [
+                    2.57
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1546,
+                "output_tokens": 250,
+                "all_times": [
+                    3.12
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2567,
+                "output_tokens": 477,
+                "all_times": [
+                    2.57,
+                    3.12
+                ]
+            }
+        }
+    },
+    "25": {
+        "question": "Find a movie similar to Star Wars Episode IV - A New Hope, The Fugitive, Being John Malkovich, Mission Impossible\nOptions:\nPet Sematary II\nStar Wars Episode V - The Empire Strikes Back\nWinnie Pooh\nKen Park\n",
+        "label": "Star Wars Episode V - The Empire Strikes Back",
+        "answer": "",
+        "time": 9.771148920059204,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [],
+            "execution_results": {}
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 205,
+                "all_times": [
+                    2.43
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1479,
+                "output_tokens": 586,
+                "all_times": [
+                    7.34
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2500,
+                "output_tokens": 791,
+                "all_times": [
+                    2.43,
+                    7.34
+                ]
+            }
+        }
+    },
+    "26": {
+        "question": "Find a movie similar to Star Wars Episode IV - A New Hope, Raiders of the Lost Ark, Mission Impossible, Star Wars Episode V - The Empire Strikes Back\nOptions:\nIndiana Jones and the Last Crusade\nStander\nToo Late for Tears\nTower Heist\n",
+        "label": "Indiana Jones and the Last Crusade",
+        "answer": "",
+        "time": 8.182455062866211,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode V - The Empire Strikes Back"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Stander"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Too Late for Tears"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Tower Heist"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 260,
+                "all_times": [
+                    2.53
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1572,
+                "output_tokens": 231,
+                "all_times": [
+                    3.22
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2593,
+                "output_tokens": 491,
+                "all_times": [
+                    2.53,
+                    3.22
+                ]
+            }
+        }
+    },
+    "27": {
+        "question": "Find a movie similar to Men in Black, The Fugitive, Raiders of the Lost Ark, Fargo\nOptions:\nThe Silence of the Lambs\nCollege\nMusic Box\nGet Smart\n",
+        "label": "The Silence of the Lambs",
+        "answer": "",
+        "time": 9.671717166900635,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Men in Black"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "The Fugitive"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Fargo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "The Silence of the Lambs"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "College"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Music Box"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Get Smart"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 298,
+                "all_times": [
+                    3.58
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1531,
+                "output_tokens": 371,
+                "all_times": [
+                    5.27
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2552,
+                "output_tokens": 669,
+                "all_times": [
+                    3.58,
+                    5.27
+                ]
+            }
+        }
+    },
+    "28": {
+        "question": "Find a movie similar to Mission Impossible, Groundhog Day, Raiders of the Lost Ark, Star Wars Episode IV - A New Hope\nOptions:\nIndiana Jones and the Last Crusade\nSuddenly, Last Summer\nPassion\nLife of Pi\n",
+        "label": "Indiana Jones and the Last Crusade",
+        "answer": "",
+        "time": 6.55524468421936,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Mission Impossible"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Groundhog Day"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "Raiders of the Lost Ark"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Star Wars Episode IV - A New Hope"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "Indiana Jones and the Last Crusade"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Suddenly, Last Summer"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Passion"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Life of Pi"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 283,
+                "all_times": [
+                    3.14
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1558,
+                "output_tokens": 238,
+                "all_times": [
+                    2.83
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2579,
+                "output_tokens": 521,
+                "all_times": [
+                    3.14,
+                    2.83
+                ]
+            }
+        }
+    },
+    "29": {
+        "question": "Find a movie similar to The Fugitive, Clear and Present Danger, The Mask, Fargo\nOptions:\nI'm Still Here\nSchindler's List\nDeath at a Funeral\nBlock Party\n",
+        "label": "Schindler's List",
+        "answer": "",
+        "time": 24.596220016479492,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "The Fugitive"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Clear and Present Danger"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "search",
+                    "args": [
+                        "The Mask"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 4,
+                    "name": "search",
+                    "args": [
+                        "Fargo"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 5,
+                    "name": "search",
+                    "args": [
+                        "I'm Still Here"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 6,
+                    "name": "search",
+                    "args": [
+                        "Schindler's List"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 7,
+                    "name": "search",
+                    "args": [
+                        "Death at a Funeral"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 8,
+                    "name": "search",
+                    "args": [
+                        "Block Party"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 9,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2,
+                        3,
+                        4,
+                        5,
+                        6,
+                        7,
+                        8
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": "",
+                "3": "",
+                "4": "",
+                "5": "",
+                "6": "",
+                "7": "",
+                "8": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1021,
+                "output_tokens": 344,
+                "all_times": [
+                    5.92
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 1533,
+                "output_tokens": 1582,
+                "all_times": [
+                    17.95
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 2554,
+                "output_tokens": 1926,
+                "all_times": [
+                    5.92,
+                    17.95
+                ]
+            }
+        }
+    }
+}

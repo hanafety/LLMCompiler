@@ -1,0 +1,69 @@
+{
+    "1": {
+        "question": "If Mariana Trench was 20% shallower and the Puerto Rico Trench was 20% deeper, which one would be shallower?",
+        "label": "Mariana Trench",
+        "answer": "Mariana Trench",
+        "time": 19.934123992919922,
+        "plan": {
+            "raw_llm_output": "",
+            "tasks": [
+                {
+                    "idx": 1,
+                    "name": "search",
+                    "args": [
+                        "Mariana Trench"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 2,
+                    "name": "search",
+                    "args": [
+                        "Puerto Rico Trench"
+                    ],
+                    "dependencies": []
+                },
+                {
+                    "idx": 3,
+                    "name": "join",
+                    "args": [],
+                    "dependencies": [
+                        1,
+                        2
+                    ]
+                }
+            ],
+            "execution_results": {
+                "1": "",
+                "2": ""
+            }
+        },
+        "stats": {
+            "planner": {
+                "calls": 1,
+                "input_tokens": 1064,
+                "output_tokens": 675,
+                "all_times": [
+                    8.53
+                ]
+            },
+            "executor": {
+                "calls": 1,
+                "input_tokens": 3073,
+                "output_tokens": 1112,
+                "all_times": [
+                    10.29
+                ]
+            },
+            "total": {
+                "calls": 2,
+                "input_tokens": 4137,
+                "output_tokens": 1787,
+                "all_times": [
+                    8.53,
+                    10.29
+                ]
+            }
+        }
+    }
+}
