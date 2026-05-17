@@ -269,6 +269,169 @@ def calculate_dependency_depth(tasks: List[TaskInfo]) -> int:
     return max(depth.values()) if depth else 0
 
 
+@dataclass
+class ValidationResult:
+    """验证结果。"""
+    summary: Dict[str, Any]
+    issues: List[Issue]
+    samples: List[Dict[str, Any]]
+
+
+def generate_report(samples: List[SampleInfo]) -> ValidationResult:
+    """生成验证报告。"""
+    all_issues: List[Issue] = []
+    sample_results = []
+
+    # 按基准测试统计
+    by_benchmark = defaultdict(lambda: {"samples": 0, "issues": 0})
+    total_parallelism = 0
+    total_depth = 0
+
+    for sample in samples:
+        # 验证DAG
+        dag_issues = validate_dag(sample)
+        # 验证参数传递
+        param_issues = validate_parameter_passing(sample)
+
+        all_issues.extend(dag_issues)
+        all_issues.extend(param_issues)
+
+        # 计算统计
+        parallelism = calculate_max_parallelism(sample.tasks)
+        depth = calculate_dependency_depth(sample.tasks)
+        total_parallelism += parallelism
+        total_depth += depth
+
+        # 记录样本结果
+        sample_results.append({
+            "sample_id": sample.sample_id,
+            "benchmark": sample.benchmark,
+            "question": sample.question,
+            "task_count": len(sample.tasks),
+            "max_parallelism": parallelism,
+            "dependency_depth": depth,
+            "issues_count": len(dag_issues) + len(param_issues),
+            "tasks": [
+                {
+                    "idx": t.idx,
+                    "name": t.name,
+                    "args": t.args,
+                    "dependencies": t.dependencies,
+                }
+                for t in sample.tasks
+            ],
+        })
+
+        # 更新统计
+        by_benchmark[sample.benchmark]["samples"] += 1
+        by_benchmark[sample.benchmark]["issues"] += len(dag_issues) + len(param_issues)
+
+    # 汇总统计
+    summary = {
+        "total_samples": len(samples),
+        "issues_found": len(all_issues),
+        "by_benchmark": dict(by_benchmark),
+        "avg_parallelism": round(total_parallelism / len(samples), 2) if samples else 0,
+        "avg_dependency_depth": round(total_depth / len(samples), 2) if samples else 0,
+    }
+
+    return ValidationResult(
+        summary=summary,
+        issues=all_issues,
+        samples=sample_results,
+    )
+
+
+def save_json_report(result: ValidationResult, output_path: Path) -> None:
+    """保存JSON报告。"""
+    report = {
+        "summary": result.summary,
+        "issues": [
+            {
+                "sample_id": i.sample_id,
+                "benchmark": i.benchmark,
+                "severity": i.severity,
+                "type": i.issue_type,
+                "message": i.message,
+                "location": i.location,
+            }
+            for i in result.issues
+        ],
+        "samples": result.samples,
+    }
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        json.dump(report, f, ensure_ascii=False, indent=2)
+
+    print(f"JSON报告已保存到: {output_path}")
+
+
+def save_markdown_report(result: ValidationResult, output_path: Path) -> None:
+    """保存Markdown报告。"""
+    lines = ["# DAG验证报告\n"]
+
+    # 概览
+    lines.append("## 概览\n")
+    lines.append(f"- 总样本数: {result.summary['total_samples']}")
+    lines.append(f"- 问题数: {result.summary['issues_found']}")
+    lines.append(f"- 平均并行度: {result.summary['avg_parallelism']}")
+    lines.append(f"- 平均依赖深度: {result.summary['avg_dependency_depth']}\n")
+
+    # 按基准测试统计
+    lines.append("### 按基准测试统计\n")
+    lines.append("| 基准测试 | 样本数 | 问题数 |")
+    lines.append("|----------|--------|--------|")
+    for benchmark, stats in result.summary["by_benchmark"].items():
+        lines.append(f"| {benchmark} | {stats['samples']} | {stats['issues']} |")
+    lines.append("")
+
+    # 问题列表
+    if result.issues:
+        lines.append("## 问题列表\n")
+
+        errors = [i for i in result.issues if i.severity == "error"]
+        warnings = [i for i in result.issues if i.severity == "warning"]
+
+        if errors:
+            lines.append(f"### 严重问题 ({len(errors)})\n")
+            lines.append("| 样本ID | 基准测试 | 问题类型 | 描述 |")
+            lines.append("|--------|----------|----------|------|")
+            for issue in errors:
+                lines.append(f"| {issue.sample_id} | {issue.benchmark} | {issue.issue_type} | {issue.message} |")
+            lines.append("")
+
+        if warnings:
+            lines.append(f"### 警告 ({len(warnings)})\n")
+            lines.append("| 样本ID | 基准测试 | 问题类型 | 描述 |")
+            lines.append("|--------|----------|----------|------|")
+            for issue in warnings:
+                lines.append(f"| {issue.sample_id} | {issue.benchmark} | {issue.issue_type} | {issue.message} |")
+            lines.append("")
+    else:
+        lines.append("## 问题列表\n\n所有样本验证通过，未发现问题。\n")
+
+    # 样本详情（只显示有问题的样本）
+    problem_samples = [s for s in result.samples if s["issues_count"] > 0]
+    if problem_samples:
+        lines.append("## 有问题的样本\n")
+        for sample in problem_samples[:10]:  # 最多显示10个
+            lines.append(f"### {sample['benchmark']} - 样本 {sample['sample_id']}\n")
+            lines.append(f"**问题:** {sample['question'][:100]}...\n")
+            lines.append("**DAG结构:**")
+            lines.append("```")
+            for task in sample["tasks"]:
+                deps = f"依赖{task['dependencies']}" if task['dependencies'] else "无依赖"
+                args_str = str(task['args'])[:50]
+                lines.append(f"[{task['idx']}] {task['name']}({args_str}) → {deps}")
+            lines.append("```\n")
+            lines.append(f"**问题数:** {sample['issues_count']}\n")
+
+    with open(output_path, "w", encoding="utf-8") as f:
+        f.write("\n".join(lines))
+
+    print(f"Markdown报告已保存到: {output_path}")
+
+
 # 正则表达式：匹配 $id 和 ${id}
 ID_PATTERN = re.compile(r"\$\{?(\d+)\}?")
 
@@ -336,8 +499,23 @@ def main():
         print("错误: 没有找到测试数据，请先运行 collect_test_data.sh")
         return
 
-    # 后续任务会添加验证逻辑
-    print("验证功能将在后续任务中实现")
+    # 验证并生成报告
+    print("正在验证...")
+    result = generate_report(samples)
+
+    # 输出摘要
+    print("\n=== 验证摘要 ===")
+    print(f"总样本数: {result.summary['total_samples']}")
+    print(f"问题数: {result.summary['issues_found']}")
+    print(f"平均并行度: {result.summary['avg_parallelism']}")
+    print(f"平均依赖深度: {result.summary['avg_dependency_depth']}")
+
+    # 保存报告
+    output_dir = Path("results")
+    save_json_report(result, output_dir / "validation_report.json")
+    save_markdown_report(result, output_dir / "validation_report.md")
+
+    print("\n验证完成！")
 
 
 if __name__ == "__main__":
