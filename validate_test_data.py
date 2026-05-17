@@ -132,6 +132,72 @@ def validate_dag(sample: SampleInfo) -> List[Issue]:
     return issues
 
 
+def extract_references(args: List[Any]) -> Set[int]:
+    """从参数列表中提取所有$id和${id}引用。"""
+    references = set()
+
+    def extract_from_value(value: Any) -> None:
+        if isinstance(value, str):
+            matches = ID_PATTERN.findall(value)
+            references.update(int(m) for m in matches)
+        elif isinstance(value, (list, tuple)):
+            for item in value:
+                extract_from_value(item)
+
+    for arg in args:
+        extract_from_value(arg)
+
+    return references
+
+
+def validate_parameter_passing(sample: SampleInfo) -> List[Issue]:
+    """验证参数传递正确性。
+
+    检查项:
+    1. $id和${id}语法正确
+    2. 引用的任务ID在有效范围内
+    3. 参数引用与依赖列表一致
+    """
+    issues = []
+    task_indices = {t.idx for t in sample.tasks}
+
+    for task in sample.tasks:
+        if task.name == "join":
+            continue  # join任务不需要参数验证
+
+        # 提取参数中的引用
+        arg_refs = extract_references(task.args)
+
+        # 检查引用是否有效
+        for ref in arg_refs:
+            if ref not in task_indices:
+                issues.append(Issue(
+                    sample_id=sample.sample_id,
+                    benchmark=sample.benchmark,
+                    severity="error",
+                    issue_type="invalid_arg_reference",
+                    message=f"任务{task.idx}的参数引用了不存在的${ref}",
+                    location={"task_idx": task.idx},
+                ))
+
+        # 检查参数引用与依赖列表是否一致
+        dep_set = set(task.dependencies)
+
+        # 参数引用应该是依赖的子集
+        missing_deps = arg_refs - dep_set
+        if missing_deps:
+            issues.append(Issue(
+                sample_id=sample.sample_id,
+                benchmark=sample.benchmark,
+                severity="warning",
+                issue_type="inconsistent_dependencies",
+                message=f"任务{task.idx}的参数引用了{missing_deps}，但这些不在依赖列表中",
+                location={"task_idx": task.idx},
+            ))
+
+    return issues
+
+
 # 正则表达式：匹配 $id 和 ${id}
 ID_PATTERN = re.compile(r"\$\{?(\d+)\}?")
 
