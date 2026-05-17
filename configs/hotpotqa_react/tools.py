@@ -1,7 +1,11 @@
+import os
+
 from src.agents.tools import Tool
 from src.docstore.wikipedia import DocstoreExplorer, ReActWikipedia
 
-web_searcher = ReActWikipedia()
+# Initialize with proxy from environment
+_proxy = os.environ.get("HTTPS_PROXY") or os.environ.get("HTTP_PROXY")
+web_searcher = ReActWikipedia(proxy=_proxy)
 docstore = DocstoreExplorer(web_searcher)
 
 tools = [
