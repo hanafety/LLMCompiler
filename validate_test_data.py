@@ -237,8 +237,16 @@ def calculate_max_parallelism(tasks: List[TaskInfo]) -> int:
 
 
 def calculate_dependency_depth(tasks: List[TaskInfo]) -> int:
-    """计算DAG的依赖深度（关键路径长度）。"""
+    """计算DAG的依赖深度（关键路径长度）。
+
+    如果存在循环依赖，返回0。
+    """
     if not tasks:
+        return 0
+
+    # 先检测循环依赖，如果有则无法计算深度
+    has_cycle, _ = detect_cycle(tasks)
+    if has_cycle:
         return 0
 
     task_dict = {t.idx: t for t in tasks}
