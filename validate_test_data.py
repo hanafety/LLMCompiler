@@ -198,6 +198,77 @@ def validate_parameter_passing(sample: SampleInfo) -> List[Issue]:
     return issues
 
 
+def calculate_max_parallelism(tasks: List[TaskInfo]) -> int:
+    """计算DAG的最大并行度。
+
+    使用拓扑排序，统计每层可并行执行的任务数。
+    """
+    if not tasks:
+        return 0
+
+    task_indices = {t.idx for t in tasks}
+    in_degree = {idx: 0 for idx in task_indices}
+    graph = defaultdict(list)
+
+    for task in tasks:
+        for dep in task.dependencies:
+            if dep in task_indices:
+                graph[dep].append(task.idx)
+                in_degree[task.idx] += 1
+
+    max_parallelism = 0
+    current_level = [idx for idx in task_indices if in_degree[idx] == 0]
+    visited = set()
+
+    while current_level:
+        max_parallelism = max(max_parallelism, len(current_level))
+        visited.update(current_level)
+
+        next_level = []
+        for node in current_level:
+            for neighbor in graph[node]:
+                in_degree[neighbor] -= 1
+                if in_degree[neighbor] == 0 and neighbor not in visited:
+                    next_level.append(neighbor)
+
+        current_level = next_level
+
+    return max_parallelism
+
+
+def calculate_dependency_depth(tasks: List[TaskInfo]) -> int:
+    """计算DAG的依赖深度（关键路径长度）。"""
+    if not tasks:
+        return 0
+
+    task_dict = {t.idx: t for t in tasks}
+    task_indices = set(task_dict.keys())
+
+    # 使用动态规划计算每个任务的最大深度
+    depth = {}
+
+    def get_depth(idx: int) -> int:
+        if idx in depth:
+            return depth[idx]
+
+        task = task_dict.get(idx)
+        if not task:
+            return 0
+
+        if not task.dependencies:
+            depth[idx] = 1
+        else:
+            valid_deps = [d for d in task.dependencies if d in task_indices]
+            depth[idx] = 1 + max((get_depth(d) for d in valid_deps), default=0)
+
+        return depth[idx]
+
+    for task in tasks:
+        get_depth(task.idx)
+
+    return max(depth.values()) if depth else 0
+
+
 # 正则表达式：匹配 $id 和 ${id}
 ID_PATTERN = re.compile(r"\$\{?(\d+)\}?")
 
