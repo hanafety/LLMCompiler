@@ -14,6 +14,7 @@ def get_model(
         llm = ChatOpenAI(
             model_name=model_name,  # type: ignore
             openai_api_key=os.environ["OPENAI_API_KEY"],  # type: ignore
+            openai_api_base=os.environ.get("OPENAI_BASE_URL"),  # type: ignore
             streaming=stream,
             temperature=temperature,
         )
