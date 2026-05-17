@@ -109,5 +109,59 @@ python evaluate_results.py --file results.json [--detail]
 ### 环境变量
 
 - `OPENAI_API_KEY`: OpenAI 模型必需
+- `OPENAI_BASE_URL`: OpenAI API 基础 URL（用于兼容 API，如 DeepSeek）
+- `OPENAI_MODEL`: 默认模型名称（可通过 `--model_name` 覆盖）
+- `HTTP_PROXY` / `HTTPS_PROXY`: HTTP 代理（用于 Wikipedia 访问）
 - `AZURE_ENDPOINT`、`AZURE_OPENAI_API_VERSION`、`AZURE_DEPLOYMENT_NAME`、`AZURE_OPENAI_API_KEY`: 用于 Azure OpenAI
 - `FRIENDLI_TOKEN`: 用于 Friendli 端点
+
+### 模型配置
+
+项目支持通过 `.env` 文件配置模型：
+
+```bash
+# .env 示例（DeepSeek API 兼容模式）
+OPENAI_API_KEY=sk-xxx
+OPENAI_BASE_URL=https://api.deepseek.com
+OPENAI_MODEL=deepseek-v4-flash
+HTTP_PROXY=http://127.0.0.1:10808
+HTTPS_PROXY=http://127.0.0.1:10808
+```
+
+**重要**: 运行时需通过 `--model_name` 指定模型，否则使用配置文件中的默认值：
+```bash
+uv run python run_llm_compiler.py --benchmark_name hotpotqa --store results.json --stream --model_name deepseek-v4-flash
+```
+
+### 工具配置
+
+每个基准测试的工具定义：
+
+| 基准测试 | 工具 | 说明 |
+|----------|------|------|
+| hotpotqa | `search` | 仅 Wikipedia 搜索 |
+| movie | `search`, `math` | 搜索 + 数学计算（需 model_name） |
+| parallelqa | `search`, `math` | 搜索 + 数学计算（需 model_name） |
+
+**注意**: movie 和 parallelqa 的工具需要 `model_name` 参数来初始化 LLMMathChain。
+
+### 测试数据验证
+
+验证 DAG 生成准确性和参数传递正确性：
+
+```bash
+# 1. 收集数据
+bash scripts/collect_test_data.sh 30
+
+# 2. 验证并生成报告
+uv run python validate_test_data.py
+
+# 3. 查看报告
+cat results/validation_report.md
+```
+
+验证内容包括：
+- 循环依赖检测（Kahn 算法）
+- 参数引用有效性（`$id` 和 `${id}`）
+- 依赖一致性检查
+- 并行度和依赖深度统计
