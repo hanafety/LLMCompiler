@@ -20,7 +20,7 @@ from configs.movie.tools import generate_tools as movie_generate_tools
 from configs.movie_react.configs import CONFIGS as MOVIE_REACT_CONFIGS
 from configs.movie_react.tools import tools as movie_react_tools
 from configs.parallelqa.configs import CONFIGS as PARALLELQA_CONFIGS
-from configs.parallelqa.tools import tools as parallelqa_tools
+from configs.parallelqa.tools import generate_tools as parallelqa_generate_tools
 from configs.parallelqa_react.configs import CONFIGS as PARALLELQA_REACT_CONFIGS
 from configs.parallelqa_react.tools import (
     generate_tools as parallelqa_react_generate_tools,
@@ -103,7 +103,7 @@ def get_tools(model_name, args):
         if args.react:
             tools = parallelqa_react_generate_tools(args, model_name)
         else:
-            tools = parallelqa_tools
+            tools = parallelqa_generate_tools(args, model_name)
     else:
         raise ValueError(f"Unknown benchmark name: {args.benchmark_name}")
     return tools
