@@ -22,7 +22,7 @@ def clean_str(p):
 class ReActWikipedia(Docstore):
     """Wrapper around wikipedia API."""
 
-    def __init__(self, benchmark=False, skip_retry_when_postprocess=False) -> None:
+    def __init__(self, benchmark=False, skip_retry_when_postprocess=False, proxy=None) -> None:
         """Check that wikipedia package is installed."""
         try:
             import requests
@@ -42,6 +42,9 @@ class ReActWikipedia(Docstore):
 
         # when True, always skip retry when postprocess
         self.skip_retry_when_postprocess = skip_retry_when_postprocess
+
+        # HTTP proxy for Wikipedia requests
+        self.proxy = proxy
 
     def reset(self):
         self.all_times = []
@@ -156,7 +159,8 @@ class ReActWikipedia(Docstore):
         entity = str(entity)
         entity_ = entity.replace(" ", "+")
         search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
-        response_text = requests.get(search_url).text
+        proxies = {"http": self.proxy, "https": self.proxy} if self.proxy else None
+        response_text = requests.get(search_url, proxies=proxies).text
 
         result = self.post_process(response_text, entity)
 
@@ -164,7 +168,7 @@ class ReActWikipedia(Docstore):
             alternative = self._get_alternative(result)
             entity_ = alternative.replace(" ", "+")
             search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
-            response_text = requests.get(search_url).text
+            response_text = requests.get(search_url, proxies=proxies).text
 
             result = self.post_process(
                 response_text, entity, skip_retry_when_postprocess=True
@@ -198,7 +202,7 @@ class ReActWikipedia(Docstore):
         search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
 
         async with aiohttp.ClientSession() as session:
-            async with session.get(search_url) as response:
+            async with session.get(search_url, proxy=self.proxy) as response:
                 response_text = await response.text()
 
         result = await self.apost_process(response_text, entity)
@@ -208,7 +212,7 @@ class ReActWikipedia(Docstore):
             entity_ = alternative.replace(" ", "+")
             search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
             async with aiohttp.ClientSession() as session:
-                async with session.get(search_url) as response:
+                async with session.get(search_url, proxy=self.proxy) as response:
                     response_text = await response.text()
 
             result = await self.apost_process(
