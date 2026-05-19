@@ -142,8 +142,26 @@ uv run python run_llm_compiler.py --benchmark_name hotpotqa --store results.json
 | hotpotqa | `search` | 仅 Wikipedia 搜索 |
 | movie | `search`, `math` | 搜索 + 数学计算（需 model_name） |
 | parallelqa | `search`, `math` | 搜索 + 数学计算（需 model_name） |
+| finance | `search`, `math` | 搜索 + 数学计算（需 model_name），DAG 级评估 |
 
-**注意**: movie 和 parallelqa 的工具需要 `model_name` 参数来初始化 LLMMathChain。
+**注意**: movie、parallelqa 和 finance 的工具需要 `model_name` 参数来初始化 LLMMathChain。
+
+### Finance Benchmark
+
+专门测试依赖生成和参数传递精确度的财经领域基准测试：
+
+```bash
+# 运行
+uv run python run_llm_compiler.py --benchmark_name finance --store results/finance.json --stream --model_name deepseek-v4-flash
+
+# DAG 级评估
+uv run python evaluate_finance.py --file results/finance.json --detail
+```
+
+- 数据集: `datasets/finance_dataset.json`（25 样本，含 expected_dag）
+- 评估指标: Task Recall/Precision, Dep Recall/Precision, Arg Ref Acc, DAG Isomorphism
+- 问题类型: 净资产比较、公司创立年份、假设性计算
+- 复杂度: shallow（比较类）, medium（计算类）, deep（多步计算类）
 
 ### 测试数据验证
 

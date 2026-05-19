@@ -1,68 +1,58 @@
 [
     {
         "id": "1",
-        "question": "Compare the net profit margin of Apple Inc. and Microsoft in 2023, which one is higher?",
-        "answer": "Microsoft",
-        "complexity": "deep",
+        "question": "Who has a higher net worth: Elon Musk or Jeff Bezos?",
+        "answer": "Elon Musk",
+        "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Apple Inc."]},
-                {"idx": 2, "tool": "search", "args": ["Microsoft"]},
-                {"idx": 3, "tool": "math", "args": ["Apple net profit margin in 2023 in percentage", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["Microsoft net profit margin in 2023 in percentage", ["$2"]]},
-                {"idx": 5, "tool": "join", "args": []}
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 3, "tool": "join", "args": []}
             ],
-            "dependencies": {"3": [1], "4": [2], "5": [3, 4]}
+            "dependencies": {"3": [1, 2]}
         }
     },
     {
         "id": "2",
-        "question": "If Amazon's 2022 revenue increased by 10% and Google's 2022 revenue decreased by 5%, what would be the difference in their revenue in billions?",
-        "answer": "296.74",
-        "complexity": "deep",
+        "question": "Compare the net worth of Warren Buffett and Jeff Bezos, who is wealthier?",
+        "answer": "Jeff Bezos",
+        "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Amazon revenue 2022"]},
-                {"idx": 2, "tool": "search", "args": ["Alphabet Google revenue 2022"]},
-                {"idx": 3, "tool": "math", "args": ["Amazon revenue in billions if increased by 10%", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["Google revenue in billions if decreased by 5%", ["$2"]]},
-                {"idx": 5, "tool": "math", "args": ["absolute difference between $3 and $4 in billions", ["$3", "$4"]]},
-                {"idx": 6, "tool": "join", "args": []}
+                {"idx": 1, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 2, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 3, "tool": "join", "args": []}
             ],
-            "dependencies": {"3": [1], "4": [2], "5": [3, 4], "6": [5]}
+            "dependencies": {"3": [1, 2]}
         }
     },
     {
         "id": "3",
-        "question": "Calculate the total market cap of Tesla, NIO, and XPeng in 2023, and find the average.",
-        "answer": "650.67",
-        "complexity": "deep",
+        "question": "If Elon Musk's net worth increased by 10%, what would it be in billions?",
+        "answer": "866.8",
+        "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Tesla market cap 2023"]},
-                {"idx": 2, "tool": "search", "args": ["NIO market cap 2023"]},
-                {"idx": 3, "tool": "search", "args": ["XPeng market cap 2023"]},
-                {"idx": 4, "tool": "math", "args": ["Tesla market cap in billions", ["$1"]]},
-                {"idx": 5, "tool": "math", "args": ["NIO market cap in billions", ["$2"]]},
-                {"idx": 6, "tool": "math", "args": ["XPeng market cap in billions", ["$3"]]},
-                {"idx": 7, "tool": "math", "args": ["sum of $4, $5, $6 divided by 3 in billions", ["$4", "$5", "$6"]]},
-                {"idx": 8, "tool": "join", "args": []}
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "math", "args": ["Elon Musk net worth in billions if increased by 10%", ["$1"]]},
+                {"idx": 3, "tool": "join", "args": []}
             ],
-            "dependencies": {"4": [1], "5": [2], "6": [3], "7": [4, 5, 6], "8": [7]}
+            "dependencies": {"2": [1], "3": [2]}
         }
     },
     {
         "id": "4",
-        "question": "Compare the GDP of China and the United States in 2022, and calculate the difference as a percentage of the US GDP.",
-        "answer": "35.5",
-        "complexity": "deep",
+        "question": "Calculate the difference between Elon Musk's net worth and Warren Buffett's net worth in billions.",
+        "answer": "639.1",
+        "complexity": "medium",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["China GDP 2022"]},
-                {"idx": 2, "tool": "search", "args": ["United States GDP 2022"]},
-                {"idx": 3, "tool": "math", "args": ["China GDP in trillions", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["United States GDP in trillions", ["$2"]]},
-                {"idx": 5, "tool": "math", "args": ["(($4 - $3) / $4) * 100 in percentage", ["$3", "$4"]]},
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 3, "tool": "math", "args": ["Elon Musk net worth in billions", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Warren Buffett net worth in billions", ["$2"]]},
+                {"idx": 5, "tool": "math", "args": ["difference between $3 and $4 in billions", ["$3", "$4"]]},
                 {"idx": 6, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1], "4": [2], "5": [3, 4], "6": [5]}
@@ -70,47 +60,31 @@
     },
     {
         "id": "5",
-        "question": "If Nvidia's market cap increased by 50% and AMD's increased by 30% in 2023, which company would have a higher market cap?",
-        "answer": "Nvidia",
-        "complexity": "medium",
-        "expected_dag": {
-            "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Nvidia market cap 2023"]},
-                {"idx": 2, "tool": "search", "args": ["AMD market cap 2023"]},
-                {"idx": 3, "tool": "math", "args": ["Nvidia market cap in billions if increased by 50%", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["AMD market cap in billions if increased by 30%", ["$2"]]},
-                {"idx": 5, "tool": "join", "args": []}
-            ],
-            "dependencies": {"3": [1], "4": [2], "5": [3, 4]}
-        }
-    },
-    {
-        "id": "6",
-        "question": "Compare the R&D expenditure of Apple and Samsung in 2023, which is higher?",
+        "question": "Which company was founded earlier: Apple or Tesla?",
         "answer": "Apple",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Apple R&D expenditure 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Samsung R&D expenditure 2023"]},
+                {"idx": 1, "tool": "search", "args": ["Apple Inc."]},
+                {"idx": 2, "tool": "search", "args": ["Tesla, Inc."]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1, 2]}
         }
     },
     {
-        "id": "7",
-        "question": "Calculate the total revenue of Tencent, Alibaba, and JD.com in 2023.",
-        "answer": "1050",
+        "id": "6",
+        "question": "Calculate the total net worth of Elon Musk, Jeff Bezos, and Warren Buffett in billions.",
+        "answer": "1221",
         "complexity": "deep",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Tencent revenue 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Alibaba revenue 2023"]},
-                {"idx": 3, "tool": "search", "args": ["JD.com revenue 2023"]},
-                {"idx": 4, "tool": "math", "args": ["Tencent revenue in billions", ["$1"]]},
-                {"idx": 5, "tool": "math", "args": ["Alibaba revenue in billions", ["$2"]]},
-                {"idx": 6, "tool": "math", "args": ["JD.com revenue in billions", ["$3"]]},
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 3, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 4, "tool": "math", "args": ["Elon Musk net worth in billions", ["$1"]]},
+                {"idx": 5, "tool": "math", "args": ["Jeff Bezos net worth in billions", ["$2"]]},
+                {"idx": 6, "tool": "math", "args": ["Warren Buffett net worth in billions", ["$3"]]},
                 {"idx": 7, "tool": "math", "args": ["sum of $4, $5, $6 in billions", ["$4", "$5", "$6"]]},
                 {"idx": 8, "tool": "join", "args": []}
             ],
@@ -118,44 +92,44 @@
         }
     },
     {
-        "id": "8",
-        "question": "If Meta's 2023 net income increased by 20%, what would its net income be in billions?",
-        "answer": "46.8",
+        "id": "7",
+        "question": "If Jeff Bezos's net worth decreased by 20%, what would it be in billions?",
+        "answer": "227.28",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Meta net income 2023"]},
-                {"idx": 2, "tool": "math", "args": ["Meta net income in billions if increased by 20%", ["$1"]]},
+                {"idx": 1, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 2, "tool": "math", "args": ["Jeff Bezos net worth in billions if decreased by 20%", ["$1"]]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"2": [1], "3": [2]}
         }
     },
     {
-        "id": "9",
-        "question": "Compare the inflation rate of the United States and Japan in 2022, which is higher?",
-        "answer": "United States",
+        "id": "8",
+        "question": "Compare the age of Apple and Tesla, which company is older?",
+        "answer": "Apple",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["United States inflation rate 2022"]},
-                {"idx": 2, "tool": "search", "args": ["Japan inflation rate 2022"]},
+                {"idx": 1, "tool": "search", "args": ["Apple Inc."]},
+                {"idx": 2, "tool": "search", "args": ["Tesla, Inc."]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1, 2]}
         }
     },
     {
-        "id": "10",
-        "question": "Calculate the ratio of Berkshire Hathaway's total assets to BlackRock's assets under management in 2023.",
-        "answer": "3.2",
+        "id": "9",
+        "question": "Calculate the ratio of Elon Musk's net worth to Warren Buffett's net worth.",
+        "answer": "5.3",
         "complexity": "medium",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Berkshire Hathaway assets 2023"]},
-                {"idx": 2, "tool": "search", "args": ["BlackRock assets under management 2023"]},
-                {"idx": 3, "tool": "math", "args": ["Berkshire Hathaway assets in billions", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["BlackRock AUM in billions", ["$2"]]},
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 3, "tool": "math", "args": ["Elon Musk net worth in billions", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Warren Buffett net worth in billions", ["$2"]]},
                 {"idx": 5, "tool": "math", "args": ["ratio of $3 to $4", ["$3", "$4"]]},
                 {"idx": 6, "tool": "join", "args": []}
             ],
@@ -163,14 +137,28 @@
         }
     },
     {
-        "id": "11",
-        "question": "If BYD's 2023 sales increased by 50%, how many ten thousands of vehicles would it sell?",
-        "answer": "210",
+        "id": "10",
+        "question": "Which company was founded first: Amazon or Nvidia?",
+        "answer": "Nvidia",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["BYD sales 2023"]},
-                {"idx": 2, "tool": "math", "args": ["BYD sales in ten thousands if increased by 50%", ["$1"]]},
+                {"idx": 1, "tool": "search", "args": ["Amazon (company)"]},
+                {"idx": 2, "tool": "search", "args": ["NVIDIA"]},
+                {"idx": 3, "tool": "join", "args": []}
+            ],
+            "dependencies": {"3": [1, 2]}
+        }
+    },
+    {
+        "id": "11",
+        "question": "If Warren Buffett's net worth increased by 50%, what would it be in billions?",
+        "answer": "223.35",
+        "complexity": "shallow",
+        "expected_dag": {
+            "tasks": [
+                {"idx": 1, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 2, "tool": "math", "args": ["Warren Buffett net worth in billions if increased by 50%", ["$1"]]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"2": [1], "3": [2]}
@@ -178,49 +166,47 @@
     },
     {
         "id": "12",
-        "question": "Compare the benchmark interest rate of the Federal Reserve and the European Central Bank in 2023, which is higher?",
-        "answer": "Federal Reserve",
+        "question": "Calculate the average net worth of Elon Musk and Jeff Bezos in billions.",
+        "answer": "536.05",
+        "complexity": "medium",
+        "expected_dag": {
+            "tasks": [
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 3, "tool": "math", "args": ["Elon Musk net worth in billions", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Jeff Bezos net worth in billions", ["$2"]]},
+                {"idx": 5, "tool": "math", "args": ["average of $3 and $4 in billions", ["$3", "$4"]]},
+                {"idx": 6, "tool": "join", "args": []}
+            ],
+            "dependencies": {"3": [1], "4": [2], "5": [3, 4], "6": [5]}
+        }
+    },
+    {
+        "id": "13",
+        "question": "Which company is headquartered in Austin: Tesla or Apple?",
+        "answer": "Tesla",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Federal Reserve interest rate 2023"]},
-                {"idx": 2, "tool": "search", "args": ["European Central Bank interest rate 2023"]},
+                {"idx": 1, "tool": "search", "args": ["Tesla, Inc."]},
+                {"idx": 2, "tool": "search", "args": ["Apple Inc."]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1, 2]}
         }
     },
     {
-        "id": "13",
-        "question": "Calculate the average net income of Goldman Sachs, Morgan Stanley, and JPMorgan in 2023.",
-        "answer": "120",
-        "complexity": "deep",
-        "expected_dag": {
-            "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Goldman Sachs net income 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Morgan Stanley net income 2023"]},
-                {"idx": 3, "tool": "search", "args": ["JPMorgan net income 2023"]},
-                {"idx": 4, "tool": "math", "args": ["Goldman Sachs net income in billions", ["$1"]]},
-                {"idx": 5, "tool": "math", "args": ["Morgan Stanley net income in billions", ["$2"]]},
-                {"idx": 6, "tool": "math", "args": ["JPMorgan net income in billions", ["$3"]]},
-                {"idx": 7, "tool": "math", "args": ["average of $4, $5, $6 in billions", ["$4", "$5", "$6"]]},
-                {"idx": 8, "tool": "join", "args": []}
-            ],
-            "dependencies": {"4": [1], "5": [2], "6": [3], "7": [4, 5, 6], "8": [7]}
-        }
-    },
-    {
         "id": "14",
-        "question": "If Toyota's 2023 revenue decreased by 10% and Volkswagen's increased by 15%, what would be the revenue difference in billions?",
-        "answer": "85",
+        "question": "Calculate how many years older Apple is than Tesla.",
+        "answer": "27",
         "complexity": "medium",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Toyota revenue 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Volkswagen revenue 2023"]},
-                {"idx": 3, "tool": "math", "args": ["Toyota revenue in billions if decreased by 10%", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["Volkswagen revenue in billions if increased by 15%", ["$2"]]},
-                {"idx": 5, "tool": "math", "args": ["absolute difference between $3 and $4 in billions", ["$3", "$4"]]},
+                {"idx": 1, "tool": "search", "args": ["Apple Inc."]},
+                {"idx": 2, "tool": "search", "args": ["Tesla, Inc."]},
+                {"idx": 3, "tool": "math", "args": ["Apple founding year", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Tesla founding year", ["$2"]]},
+                {"idx": 5, "tool": "math", "args": ["Tesla year minus Apple year", ["$3", "$4"]]},
                 {"idx": 6, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1], "4": [2], "5": [3, 4], "6": [5]}
@@ -228,13 +214,13 @@
     },
     {
         "id": "15",
-        "question": "Compare the revenue of Saudi Aramco and ExxonMobil in 2023, which is higher?",
-        "answer": "Saudi Aramco",
+        "question": "Compare the net worth of Elon Musk and Warren Buffett, who is wealthier?",
+        "answer": "Elon Musk",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Saudi Aramco revenue 2023"]},
-                {"idx": 2, "tool": "search", "args": ["ExxonMobil revenue 2023"]},
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Warren Buffett"]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1, 2]}
@@ -242,32 +228,29 @@
     },
     {
         "id": "16",
-        "question": "Calculate the total cloud revenue of Microsoft Azure, Google Cloud, and Amazon AWS in 2023.",
-        "answer": "150",
-        "complexity": "deep",
+        "question": "If Elon Musk's net worth increased by 50% and Jeff Bezos's decreased by 10%, who would have a higher net worth?",
+        "answer": "Elon Musk",
+        "complexity": "medium",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Microsoft Azure revenue 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Google Cloud revenue 2023"]},
-                {"idx": 3, "tool": "search", "args": ["Amazon AWS revenue 2023"]},
-                {"idx": 4, "tool": "math", "args": ["Microsoft Azure revenue in billions", ["$1"]]},
-                {"idx": 5, "tool": "math", "args": ["Google Cloud revenue in billions", ["$2"]]},
-                {"idx": 6, "tool": "math", "args": ["Amazon AWS revenue in billions", ["$3"]]},
-                {"idx": 7, "tool": "math", "args": ["sum of $4, $5, $6 in billions", ["$4", "$5", "$6"]]},
-                {"idx": 8, "tool": "join", "args": []}
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 3, "tool": "math", "args": ["Elon Musk net worth in billions if increased by 50%", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Jeff Bezos net worth in billions if decreased by 10%", ["$2"]]},
+                {"idx": 5, "tool": "join", "args": []}
             ],
-            "dependencies": {"4": [1], "5": [2], "6": [3], "7": [4, 5, 6], "8": [7]}
+            "dependencies": {"3": [1], "4": [2], "5": [3, 4]}
         }
     },
     {
         "id": "17",
-        "question": "If the Hang Seng Index rose 15% and the Nikkei 225 rose 25% in 2023, which index had a larger gain?",
-        "answer": "Nikkei 225",
+        "question": "Which cryptocurrency has higher market capitalization: Bitcoin or Ethereum?",
+        "answer": "Bitcoin",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Hang Seng Index 2023 performance"]},
-                {"idx": 2, "tool": "search", "args": ["Nikkei 225 2023 performance"]},
+                {"idx": 1, "tool": "search", "args": ["Bitcoin"]},
+                {"idx": 2, "tool": "search", "args": ["Ethereum"]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1, 2]}
@@ -275,95 +258,98 @@
     },
     {
         "id": "18",
-        "question": "Compare the capital expenditure of TSMC and Samsung Electronics in 2023, which is higher?",
-        "answer": "TSMC",
-        "complexity": "shallow",
-        "expected_dag": {
-            "tasks": [
-                {"idx": 1, "tool": "search", "args": ["TSMC capital expenditure 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Samsung Electronics capex 2023"]},
-                {"idx": 3, "tool": "join", "args": []}
-            ],
-            "dependencies": {"3": [1, 2]}
-        }
-    },
-    {
-        "id": "19",
-        "question": "Calculate the sum of trade balances for the United States, China, Japan, and Germany in 2022.",
-        "answer": "850",
+        "question": "Calculate the total founding years of Apple, Tesla, Amazon, and Nvidia.",
+        "answer": "7966",
         "complexity": "deep",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["United States trade balance 2022"]},
-                {"idx": 2, "tool": "search", "args": ["China trade balance 2022"]},
-                {"idx": 3, "tool": "search", "args": ["Japan trade balance 2022"]},
-                {"idx": 4, "tool": "search", "args": ["Germany trade balance 2022"]},
-                {"idx": 5, "tool": "math", "args": ["US trade balance in billions", ["$1"]]},
-                {"idx": 6, "tool": "math", "args": ["China trade balance in billions", ["$2"]]},
-                {"idx": 7, "tool": "math", "args": ["Japan trade balance in billions", ["$3"]]},
-                {"idx": 8, "tool": "math", "args": ["Germany trade balance in billions", ["$4"]]},
-                {"idx": 9, "tool": "math", "args": ["sum of $5, $6, $7, $8 in billions", ["$5", "$6", "$7", "$8"]]},
+                {"idx": 1, "tool": "search", "args": ["Apple Inc."]},
+                {"idx": 2, "tool": "search", "args": ["Tesla, Inc."]},
+                {"idx": 3, "tool": "search", "args": ["Amazon (company)"]},
+                {"idx": 4, "tool": "search", "args": ["NVIDIA"]},
+                {"idx": 5, "tool": "math", "args": ["Apple founding year", ["$1"]]},
+                {"idx": 6, "tool": "math", "args": ["Tesla founding year", ["$2"]]},
+                {"idx": 7, "tool": "math", "args": ["Amazon founding year", ["$3"]]},
+                {"idx": 8, "tool": "math", "args": ["Nvidia founding year", ["$4"]]},
+                {"idx": 9, "tool": "math", "args": ["sum of $5, $6, $7, $8", ["$5", "$6", "$7", "$8"]]},
                 {"idx": 10, "tool": "join", "args": []}
             ],
             "dependencies": {"5": [1], "6": [2], "7": [3], "8": [4], "9": [5, 6, 7, 8], "10": [9]}
         }
     },
     {
-        "id": "20",
-        "question": "If Chevron's 2023 profit decreased by 20%, what would its profit be in billions?",
-        "answer": "28",
-        "complexity": "shallow",
-        "expected_dag": {
-            "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Chevron profit 2023"]},
-                {"idx": 2, "tool": "math", "args": ["Chevron profit in billions if decreased by 20%", ["$1"]]},
-                {"idx": 3, "tool": "join", "args": []}
-            ],
-            "dependencies": {"2": [1], "3": [2]}
-        }
-    },
-    {
-        "id": "21",
-        "question": "Compare the transaction volume of Visa and Mastercard in 2023, which is higher?",
-        "answer": "Visa",
-        "complexity": "shallow",
-        "expected_dag": {
-            "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Visa transaction volume 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Mastercard transaction volume 2023"]},
-                {"idx": 3, "tool": "join", "args": []}
-            ],
-            "dependencies": {"3": [1, 2]}
-        }
-    },
-    {
-        "id": "22",
-        "question": "Calculate the average R&D spending as a percentage of revenue for Intel, AMD, and Nvidia in 2023.",
-        "answer": "22",
+        "id": "19",
+        "question": "If the net worth of Elon Musk, Jeff Bezos, and Warren Buffett were combined and split equally among 3 people, how much would each get in billions?",
+        "answer": "407",
         "complexity": "deep",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Intel R&D and revenue 2023"]},
-                {"idx": 2, "tool": "search", "args": ["AMD R&D and revenue 2023"]},
-                {"idx": 3, "tool": "search", "args": ["Nvidia R&D and revenue 2023"]},
-                {"idx": 4, "tool": "math", "args": ["Intel R&D as percentage of revenue", ["$1"]]},
-                {"idx": 5, "tool": "math", "args": ["AMD R&D as percentage of revenue", ["$2"]]},
-                {"idx": 6, "tool": "math", "args": ["Nvidia R&D as percentage of revenue", ["$3"]]},
-                {"idx": 7, "tool": "math", "args": ["average of $4, $5, $6 in percentage", ["$4", "$5", "$6"]]},
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 3, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 4, "tool": "math", "args": ["Elon Musk net worth in billions", ["$1"]]},
+                {"idx": 5, "tool": "math", "args": ["Jeff Bezos net worth in billions", ["$2"]]},
+                {"idx": 6, "tool": "math", "args": ["Warren Buffett net worth in billions", ["$3"]]},
+                {"idx": 7, "tool": "math", "args": ["sum of $4, $5, $6 divided by 3 in billions", ["$4", "$5", "$6"]]},
                 {"idx": 8, "tool": "join", "args": []}
             ],
             "dependencies": {"4": [1], "5": [2], "6": [3], "7": [4, 5, 6], "8": [7]}
         }
     },
     {
-        "id": "23",
-        "question": "Compare the aircraft deliveries of Boeing and Airbus in 2023, which delivered more?",
-        "answer": "Airbus",
+        "id": "20",
+        "question": "Compare the founding years of Amazon and Nvidia, which was founded first?",
+        "answer": "Nvidia",
         "complexity": "shallow",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Boeing deliveries 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Airbus deliveries 2023"]},
+                {"idx": 1, "tool": "search", "args": ["Amazon (company)"]},
+                {"idx": 2, "tool": "search", "args": ["NVIDIA"]},
+                {"idx": 3, "tool": "join", "args": []}
+            ],
+            "dependencies": {"3": [1, 2]}
+        }
+    },
+    {
+        "id": "21",
+        "question": "If Elon Musk's net worth were split equally between Apple and Tesla, how much would each company get in billions?",
+        "answer": "394",
+        "complexity": "shallow",
+        "expected_dag": {
+            "tasks": [
+                {"idx": 1, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 2, "tool": "math", "args": ["Elon Musk net worth divided by 2 in billions", ["$1"]]},
+                {"idx": 3, "tool": "join", "args": []}
+            ],
+            "dependencies": {"2": [1], "3": [2]}
+        }
+    },
+    {
+        "id": "22",
+        "question": "Calculate the difference between Jeff Bezos's and Warren Buffett's net worth in billions.",
+        "answer": "135.2",
+        "complexity": "medium",
+        "expected_dag": {
+            "tasks": [
+                {"idx": 1, "tool": "search", "args": ["Jeff Bezos"]},
+                {"idx": 2, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 3, "tool": "math", "args": ["Jeff Bezos net worth in billions", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Warren Buffett net worth in billions", ["$2"]]},
+                {"idx": 5, "tool": "math", "args": ["difference between $3 and $4 in billions", ["$3", "$4"]]},
+                {"idx": 6, "tool": "join", "args": []}
+            ],
+            "dependencies": {"3": [1], "4": [2], "5": [3, 4], "6": [5]}
+        }
+    },
+    {
+        "id": "23",
+        "question": "Which company is older: Amazon or Tesla?",
+        "answer": "Amazon",
+        "complexity": "shallow",
+        "expected_dag": {
+            "tasks": [
+                {"idx": 1, "tool": "search", "args": ["Amazon (company)"]},
+                {"idx": 2, "tool": "search", "args": ["Tesla, Inc."]},
                 {"idx": 3, "tool": "join", "args": []}
             ],
             "dependencies": {"3": [1, 2]}
@@ -371,38 +357,39 @@
     },
     {
         "id": "24",
-        "question": "If Pfizer's 2023 revenue decreased by 40% and Merck's increased by 10%, what would be the ratio of Pfizer's to Merck's revenue?",
-        "answer": "0.85",
+        "question": "If Warren Buffett's net worth increased by 100% and Elon Musk's decreased by 50%, who would be wealthier?",
+        "answer": "Elon Musk",
         "complexity": "medium",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Pfizer revenue 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Merck revenue 2023"]},
-                {"idx": 3, "tool": "math", "args": ["Pfizer revenue in billions if decreased by 40%", ["$1"]]},
-                {"idx": 4, "tool": "math", "args": ["Merck revenue in billions if increased by 10%", ["$2"]]},
-                {"idx": 5, "tool": "math", "args": ["ratio of $3 to $4", ["$3", "$4"]]},
-                {"idx": 6, "tool": "join", "args": []}
+                {"idx": 1, "tool": "search", "args": ["Warren Buffett"]},
+                {"idx": 2, "tool": "search", "args": ["Elon Musk"]},
+                {"idx": 3, "tool": "math", "args": ["Warren Buffett net worth in billions if doubled", ["$1"]]},
+                {"idx": 4, "tool": "math", "args": ["Elon Musk net worth in billions if halved", ["$2"]]},
+                {"idx": 5, "tool": "join", "args": []}
             ],
-            "dependencies": {"3": [1], "4": [2], "5": [3, 4], "6": [5]}
+            "dependencies": {"3": [1], "4": [2], "5": [3, 4]}
         }
     },
     {
         "id": "25",
-        "question": "Calculate the total market cap of Bitcoin, Ethereum, and XRP at the end of 2023.",
-        "answer": "1050",
+        "question": "Calculate the average founding year of Apple, Amazon, Nvidia, and Tesla.",
+        "answer": "1991.5",
         "complexity": "deep",
         "expected_dag": {
             "tasks": [
-                {"idx": 1, "tool": "search", "args": ["Bitcoin market cap 2023"]},
-                {"idx": 2, "tool": "search", "args": ["Ethereum market cap 2023"]},
-                {"idx": 3, "tool": "search", "args": ["XRP market cap 2023"]},
-                {"idx": 4, "tool": "math", "args": ["Bitcoin market cap in billions", ["$1"]]},
-                {"idx": 5, "tool": "math", "args": ["Ethereum market cap in billions", ["$2"]]},
-                {"idx": 6, "tool": "math", "args": ["XRP market cap in billions", ["$3"]]},
-                {"idx": 7, "tool": "math", "args": ["sum of $4, $5, $6 in billions", ["$4", "$5", "$6"]]},
-                {"idx": 8, "tool": "join", "args": []}
+                {"idx": 1, "tool": "search", "args": ["Apple Inc."]},
+                {"idx": 2, "tool": "search", "args": ["Amazon (company)"]},
+                {"idx": 3, "tool": "search", "args": ["NVIDIA"]},
+                {"idx": 4, "tool": "search", "args": ["Tesla, Inc."]},
+                {"idx": 5, "tool": "math", "args": ["Apple founding year", ["$1"]]},
+                {"idx": 6, "tool": "math", "args": ["Amazon founding year", ["$2"]]},
+                {"idx": 7, "tool": "math", "args": ["Nvidia founding year", ["$3"]]},
+                {"idx": 8, "tool": "math", "args": ["Tesla founding year", ["$4"]]},
+                {"idx": 9, "tool": "math", "args": ["average of $5, $6, $7, $8", ["$5", "$6", "$7", "$8"]]},
+                {"idx": 10, "tool": "join", "args": []}
             ],
-            "dependencies": {"4": [1], "5": [2], "6": [3], "7": [4, 5, 6], "8": [7]}
+            "dependencies": {"5": [1], "6": [2], "7": [3], "8": [4], "9": [5, 6, 7, 8], "10": [9]}
         }
     }
 ]

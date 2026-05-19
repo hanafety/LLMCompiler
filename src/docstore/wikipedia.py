@@ -22,7 +22,10 @@ def clean_str(p):
 class ReActWikipedia(Docstore):
     """Wrapper around wikipedia API."""
 
-    def __init__(self, benchmark=False, skip_retry_when_postprocess=False, proxy=None) -> None:
+    # Default User-Agent for Wikipedia requests
+    DEFAULT_USER_AGENT = "Mozilla/5.0 (compatible; LLMCompiler/1.0; +https://github.com/SqueezeAILab/LLMCompiler)"
+
+    def __init__(self, benchmark=False, skip_retry_when_postprocess=False, proxy=None, user_agent=None) -> None:
         """Check that wikipedia package is installed."""
         try:
             import requests
@@ -45,6 +48,10 @@ class ReActWikipedia(Docstore):
 
         # HTTP proxy for Wikipedia requests
         self.proxy = proxy
+
+        # User-Agent header (required by Wikipedia)
+        self.user_agent = user_agent or self.DEFAULT_USER_AGENT
+        self.headers = {"User-Agent": self.user_agent}
 
     def reset(self):
         self.all_times = []
@@ -160,7 +167,7 @@ class ReActWikipedia(Docstore):
         entity_ = entity.replace(" ", "+")
         search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
         proxies = {"http": self.proxy, "https": self.proxy} if self.proxy else None
-        response_text = requests.get(search_url, proxies=proxies).text
+        response_text = requests.get(search_url, proxies=proxies, headers=self.headers).text
 
         result = self.post_process(response_text, entity)
 
@@ -168,7 +175,7 @@ class ReActWikipedia(Docstore):
             alternative = self._get_alternative(result)
             entity_ = alternative.replace(" ", "+")
             search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
-            response_text = requests.get(search_url, proxies=proxies).text
+            response_text = requests.get(search_url, proxies=proxies, headers=self.headers).text
 
             result = self.post_process(
                 response_text, entity, skip_retry_when_postprocess=True
@@ -201,7 +208,7 @@ class ReActWikipedia(Docstore):
         entity_ = entity.replace(" ", "+")
         search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
 
-        async with aiohttp.ClientSession() as session:
+        async with aiohttp.ClientSession(headers=self.headers) as session:
             async with session.get(search_url, proxy=self.proxy) as response:
                 response_text = await response.text()
 
@@ -211,7 +218,7 @@ class ReActWikipedia(Docstore):
             alternative = self._get_alternative(result)
             entity_ = alternative.replace(" ", "+")
             search_url = f"https://en.wikipedia.org/w/index.php?search={entity_}"
-            async with aiohttp.ClientSession() as session:
+            async with aiohttp.ClientSession(headers=self.headers) as session:
                 async with session.get(search_url, proxy=self.proxy) as response:
                     response_text = await response.text()
 
