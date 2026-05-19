@@ -1,7 +1,7 @@
 from src.llm_compiler.constants import END_OF_PLAN, JOINNER_FINISH
 
 PLANNER_PROMPT = (
-    "Question: 比较苹果公司和微软公司2023年的净利润率，哪家更高？\n"
+    "Question: Compare the net profit margin of Apple Inc. and Microsoft in 2023, which one is higher?\n"
     '1. search("Apple Inc.")\n'
     '2. search("Microsoft")\n'
     '3. math("Apple net profit margin in 2023 in percentage", ["$1"])\n'
@@ -10,7 +10,7 @@ PLANNER_PROMPT = (
     f"5. join(){END_OF_PLAN}\n"
     "###\n"
     "\n"
-    "Question: 如果亚马逊2022年的营收增长10%，同时谷歌2022年的营收下降5%，两者营收相差多少亿美元？\n"
+    "Question: If Amazon's 2022 revenue increased by 10% and Google's 2022 revenue decreased by 5%, what would be the difference in their revenue in billions?\n"
     '1. search("Amazon revenue 2022")\n'
     '2. search("Alphabet Google revenue 2022")\n'
     '3. math("Amazon revenue in billions if increased by 10%", ["$1"])\n'
@@ -20,7 +20,7 @@ PLANNER_PROMPT = (
     f"6. join(){END_OF_PLAN}\n"
     "###\n"
     "\n"
-    "Question: 计算特斯拉、蔚来、小鹏三家电动汽车公司2023年的市值总和，并求平均值。\n"
+    "Question: Calculate the total market cap of Tesla, NIO, and XPeng in 2023, and find the average.\n"
     '1. search("Tesla market cap 2023")\n'
     '2. search("NIO market cap 2023")\n'
     '3. search("XPeng market cap 2023")\n'
@@ -32,7 +32,7 @@ PLANNER_PROMPT = (
     f"8. join(){END_OF_PLAN}\n"
     "###\n"
     "\n"
-    "Question: 比较中美两国2022年的GDP，并计算其差额占美国GDP的百分比。\n"
+    "Question: Compare the GDP of China and the United States in 2022, and calculate the difference as a percentage of the US GDP.\n"
     '1. search("China GDP 2022")\n'
     '2. search("United States GDP 2022")\n'
     '3. math("China GDP in trillions", ["$1"])\n'
@@ -42,7 +42,7 @@ PLANNER_PROMPT = (
     f"6. join(){END_OF_PLAN}\n"
     "###\n"
     "\n"
-    "Question: 如果英伟达2023年股价上涨50%，AMD上涨30%，谁的市值更高？\n"
+    "Question: If Nvidia's market cap increased by 50% and AMD's increased by 30% in 2023, which company would have a higher market cap?\n"
     '1. search("Nvidia market cap 2023")\n'
     '2. search("AMD market cap 2023")\n'
     '3. math("Nvidia market cap in billions if increased by 50%", ["$1"])\n'
@@ -64,7 +64,7 @@ OUTPUT_PROMPT = (
     "\n"
     "Here are some examples:\n"
     "\n"
-    "Question: 比较苹果公司和微软公司2023年的净利润率，哪家更高？\n"
+    "Question: Compare the net profit margin of Apple Inc. and Microsoft in 2023, which one is higher?\n"
     "search(Apple Inc.)\n"
     "Observation: Apple Inc. is a technology company... net income $94.68 billion in 2022 on revenue of $394.33 billion...\n"
     "search(Microsoft)\n"
@@ -77,7 +77,7 @@ OUTPUT_PROMPT = (
     f"Action: {JOINNER_FINISH}(Microsoft)\n"
     "###\n"
     "\n"
-    "Question: 如果亚马逊2022年的营收增长10%，同时谷歌2022年的营收下降5%，两者营收相差多少亿美元？\n"
+    "Question: If Amazon's 2022 revenue increased by 10% and Google's 2022 revenue decreased by 5%, what would be the difference in their revenue in billions?\n"
     "search(Amazon revenue 2022)\n"
     "Observation: Amazon reported revenue of $514 billion in 2022...\n"
     "search(Alphabet Google revenue 2022)\n"
