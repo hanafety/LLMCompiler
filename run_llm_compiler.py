@@ -25,6 +25,8 @@ from configs.parallelqa_react.configs import CONFIGS as PARALLELQA_REACT_CONFIGS
 from configs.parallelqa_react.tools import (
     generate_tools as parallelqa_react_generate_tools,
 )
+from configs.finance.configs import CONFIGS as FINANCE_CONFIGS
+from configs.finance.tools import generate_tools as finance_generate_tools
 from src.callbacks.callbacks import StatsCallbackHandler
 from src.llm_compiler.constants import END_OF_PLAN
 from src.llm_compiler.llm_compiler import LLMCompiler
@@ -53,7 +55,7 @@ argparser.add_argument(
     type=str,
     required=True,
     help="benchmark name",
-    choices=["movie", "hotpotqa", "parallelqa"],
+    choices=["movie", "hotpotqa", "parallelqa", "finance"],
 )
 argparser.add_argument("--store", type=str, required=True, help="store path")
 argparser.add_argument("--api_key", type=str, default=None, help="openai api key")
@@ -85,6 +87,8 @@ def get_dataset(args):
         dataset_name = "datasets/hotpotqa_comparison.json"
     elif args.benchmark_name == "parallelqa":
         dataset_name = "datasets/parallelqa_dataset.json"
+    elif args.benchmark_name == "finance":
+        dataset_name = "datasets/finance_dataset.json"
     return json.load(open(dataset_name, "r"))
 
 
@@ -104,6 +108,11 @@ def get_tools(model_name, args):
             tools = parallelqa_react_generate_tools(args, model_name)
         else:
             tools = parallelqa_generate_tools(args, model_name)
+    elif args.benchmark_name == "finance":
+        if args.react:
+            raise ValueError("Finance benchmark does not support ReAct mode")
+        else:
+            tools = finance_generate_tools(args, model_name)
     else:
         raise ValueError(f"Unknown benchmark name: {args.benchmark_name}")
     return tools
@@ -125,6 +134,11 @@ def get_configs(args):
             configs = PARALLELQA_REACT_CONFIGS
         else:
             configs = PARALLELQA_CONFIGS
+    elif args.benchmark_name == "finance":
+        if args.react:
+            raise ValueError("Finance benchmark does not support ReAct mode")
+        else:
+            configs = FINANCE_CONFIGS
     else:
         raise ValueError(f"Unknown benchmark name: {args.benchmark_name}")
     return configs
