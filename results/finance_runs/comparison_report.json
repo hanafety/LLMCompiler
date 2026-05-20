@@ -1,0 +1,182 @@
+{
+  "config": {
+    "n_runs": 7,
+    "model": "deepseek-v4-flash",
+    "n_samples": 25
+  },
+  "aggregate": {
+    "task_recall": {
+      "mean": 0.8708470606191195,
+      "std": 0.059165733491228306,
+      "min": 0.7606666666666666,
+      "max": 0.9666666666666668
+    },
+    "dep_recall": {
+      "mean": 0.6380601625265491,
+      "std": 0.1293241820003777,
+      "min": 0.4382857142857142,
+      "max": 0.8800000000000001
+    },
+    "dep_precision": {
+      "mean": 0.563001641813859,
+      "std": 0.11434262093252477,
+      "min": 0.3806837606837607,
+      "max": 0.7777777777777778
+    },
+    "arg_ref_acc": {
+      "mean": 0.6682062055591468,
+      "std": 0.055820648925271374,
+      "min": 0.6,
+      "max": 0.75
+    },
+    "dag_isomorphism": {
+      "mean": 0.4641133376427494,
+      "std": 0.0657634489693215,
+      "min": 0.4,
+      "max": 0.6
+    },
+    "latency_mean": {
+      "mean": 29.109430011644417,
+      "std": 1.3405023122838118,
+      "min": 26.889499803384144,
+      "max": 31.56840440750122
+    }
+  },
+  "by_complexity": {
+    "shallow": {
+      "dag_isomorphism": {
+        "mean": 0.7083333333333334,
+        "std": 0.45452967144315476,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "dep_recall": {
+        "mean": 0.7777777777777778,
+        "std": 0.4073021749615328,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "arg_ref_acc": {
+        "mean": 0.8888888888888888,
+        "std": 0.3142696805273545,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "n_samples": 72
+    },
+    "medium": {
+      "dag_isomorphism": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "dep_recall": {
+        "mean": 0.3096774193548388,
+        "std": 0.25822575607986453,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "arg_ref_acc": {
+        "mean": 0.3225806451612903,
+        "std": 0.4674637660061109,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "n_samples": 31
+    },
+    "deep": {
+      "dag_isomorphism": {
+        "mean": 0.0,
+        "std": 0.0,
+        "min": 0.0,
+        "max": 0.0
+      },
+      "dep_recall": {
+        "mean": 0.27551020408163257,
+        "std": 0.20535318160712354,
+        "min": 0.0,
+        "max": 0.42857142857142855
+      },
+      "arg_ref_acc": {
+        "mean": 0.35714285714285715,
+        "std": 0.47915742374995485,
+        "min": 0.0,
+        "max": 1.0
+      },
+      "n_samples": 14
+    }
+  },
+  "per_run_summary": [
+    {
+      "run": 1,
+      "task_recall": 0.7606666666666666,
+      "dep_recall": 0.4382857142857142,
+      "dep_precision": 0.3806837606837607,
+      "arg_ref_acc": 0.72,
+      "dag_isomorphism": 0.4,
+      "latency_mean": 31.56840440750122,
+      "n_samples": 25
+    },
+    {
+      "run": 2,
+      "task_recall": 0.8946078431372548,
+      "dep_recall": 0.719327731092437,
+      "dep_precision": 0.6279537456008045,
+      "arg_ref_acc": 0.6470588235294118,
+      "dag_isomorphism": 0.47058823529411764,
+      "latency_mean": 29.342148416182575,
+      "n_samples": 17
+    },
+    {
+      "run": 3,
+      "task_recall": 0.8802083333333333,
+      "dep_recall": 0.6035714285714286,
+      "dep_precision": 0.5566239316239316,
+      "arg_ref_acc": 0.75,
+      "dag_isomorphism": 0.5,
+      "latency_mean": 29.027986377477646,
+      "n_samples": 8
+    },
+    {
+      "run": 4,
+      "task_recall": 0.8618055555555557,
+      "dep_recall": 0.6232142857142857,
+      "dep_precision": 0.5354344729344729,
+      "arg_ref_acc": 0.625,
+      "dag_isomorphism": 0.4166666666666667,
+      "latency_mean": 26.889499803384144,
+      "n_samples": 24
+    },
+    {
+      "run": 5,
+      "task_recall": 0.9006410256410257,
+      "dep_recall": 0.6637362637362638,
+      "dep_precision": 0.5818540433925049,
+      "arg_ref_acc": 0.6153846153846154,
+      "dag_isomorphism": 0.46153846153846156,
+      "latency_mean": 29.627756118774414,
+      "n_samples": 13
+    },
+    {
+      "run": 6,
+      "task_recall": 0.8313333333333334,
+      "dep_recall": 0.5382857142857143,
+      "dep_precision": 0.4806837606837607,
+      "arg_ref_acc": 0.72,
+      "dag_isomorphism": 0.4,
+      "latency_mean": 29.31150260925293,
+      "n_samples": 25
+    },
+    {
+      "run": 7,
+      "task_recall": 0.9666666666666668,
+      "dep_recall": 0.8800000000000001,
+      "dep_precision": 0.7777777777777778,
+      "arg_ref_acc": 0.6,
+      "dag_isomorphism": 0.6,
+      "latency_mean": 27.99871234893799,
+      "n_samples": 5
+    }
+  ]
+}
